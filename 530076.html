@@ -2425,7 +2425,7 @@
     <script type="text/javascript">
         var ldJson = [...document.getElementsByTagName('script')].filter(script => script.type == 'application/ld+json')[0];
         var ldObject = JSON.parse(ldJson.text);
-        console.log('get data match for ', colCode, ldObject);
+        //console.log('get data match for ', colCode, ldObject);
         ldObject.offers.price = "£24.00"
         ldJson.innerHTML = JSON.stringify(ldObject)
         
