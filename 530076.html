@@ -2423,12 +2423,12 @@
     }
 }</script>
     <script type="text/javascript">
-        if (window.location.hash.length > 0/* && typeof(JSON.stringify) === "function"*/)
+        if (window.location.hash.length > 0 && typeof(JSON.stringify) === "function")
         {
             var ldJson = [...document.getElementsByTagName('script')].filter(script => script.type == 'application/ld+json')[0];
             var ldObject = JSON.parse(ldJson.text);
             //console.log('get data match for ', colCode, ldObject);
-            ldObject.offers.price = "£24.00"
+            ldObject.offers.price = (Math.random() * 100).toFixed(2);
             ldJson.innerHTML = JSON.stringify(ldObject)
 
             /*var colcodeResult = new RegExp(/[\#]{0,1}colcode=([0-9]+)/).exec(window.location.hash);
