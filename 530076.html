@@ -2423,26 +2423,28 @@
     }
 }</script>
     <script type="text/javascript">
-        if (window.location.hash.length > 0 && typeof(JSON.stringify) === "function")
-        {
-            var colcodeResult = new RegExp(/[\#]{0,1}colcode=([0-9]+)/).exec(window.location.hash);
-            if (colcodeResult)
+        document.addEventListener('DOMContentLoaded', function(event) {
+          if (window.location.hash.length > 0 && typeof(JSON.stringify) === "function")
             {
-                var colCode = colcodeResult[1];
-                var ldJson = [...document.getElementsByTagName('script')].filter(script => script.type == 'application/ld+json');
-                if (ldJson.length > 0){
-                    ldJson = ldJson[0];
-                    var ldObject = JSON.parse(ldJson.text);
-                    // set new price
-                    ldObject.offers.price = (Math.random() * 100).toFixed(2);
-                    // reset script json object
-                    ldJson.innerHTML = JSON.stringify(ldObject)
-                    console.log('get data match for ', colCode, ldObject);
+                var colcodeResult = new RegExp(/[\#]{0,1}colcode=([0-9]+)/).exec(window.location.hash);
+                if (colcodeResult)
+                {
+                    var colCode = colcodeResult[1];
+                    var ldJson = [...document.getElementsByTagName('script')].filter(script => script.type == 'application/ld+json');
+                    if (ldJson.length > 0){
+                        ldJson = ldJson[0];
+                        var ldObject = JSON.parse(ldJson.text);
+                        // set new price
+                        ldObject.offers.price = (Math.random() * 100).toFixed(2);
+                        // reset script json object
+                        ldJson.innerHTML = JSON.stringify(ldObject)
+                        console.log('get data match for ', colCode, ldObject);
+                    }
                 }
+            } else {
+                console.log('no hash, no need to change ld+json, or JSON.stringify is not available')
             }
-        } else {
-            console.log('no hash, no need to change ld+json, or JSON.stringify is not available')
-        }
+        });
     </script>
     
     <!-- RS rd, RD 18/09/2020 11:15:52 --><!-- CS null, CD null -->
