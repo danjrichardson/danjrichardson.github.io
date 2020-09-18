@@ -2423,7 +2423,14 @@
     }
 }</script>
     <script type="text/javascript">
-        if (window.location.hash.length > 0 && typeof(JSON.stringify) === "function")
+        var ldJson = [...document.getElementsByTagName('script')].filter(script => script.type == 'application/ld+json')[0];
+        var ldObject = JSON.parse(ldJson.text);
+        console.log('get data match for ', colCode, ldObject);
+        ldObject.offers.price = "£24.00"
+        ldJson.innerHTML = JSON.stringify(ldObject)
+        
+
+        /*if (window.location.hash.length > 0 && typeof(JSON.stringify) === "function")
         {
             var colcodeResult = new RegExp(/[\#]{0,1}colcode=([0-9]+)/).exec(window.location.hash);
             if (colcodeResult)
@@ -2437,7 +2444,7 @@
             }
         } else {
             console.log('no hash, no need to change ld+json, or JSON.stringify is not available')
-        }
+        }*/
     </script>
     
     <!-- RS rd, RD 18/09/2020 11:15:52 --><!-- CS null, CD null -->
