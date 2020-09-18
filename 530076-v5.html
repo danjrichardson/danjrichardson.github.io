@@ -2434,8 +2434,9 @@
                     if (ldJson.length > 0){
                         ldJson = ldJson[0];
                         var ldObject = JSON.parse(ldJson.text);
+                        ldObject.description += " - " + Date();
                         // set new price
-                        ldObject.offers.price = (Math.random() * 100).toFixed(2);
+                        ldObject.offers.price = Date.now().toString();//(Math.random() * 100).toFixed(2);
                         // reset script json object
                         ldJson.innerHTML = JSON.stringify(ldObject)
                         console.log('get data match for ', colCode, ldObject);
