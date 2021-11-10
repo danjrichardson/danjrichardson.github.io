@@ -1,0 +1,125 @@
+---
+//import contentApi from '$api/content.ts'
+//let allContent = await contentApi();
+---
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />    
+	<meta name="keywords" content="Dan Richardson, freelance web developer" />
+	<meta name="description" content="Dan Richardson - Freelance Web Developer, Derby" />
+    <link
+        rel="stylesheet"
+        href={Astro.resolve("../css/global.css")}>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?DM+Mono:wght@300&family=Major+Mono+Display&display=swap" rel="stylesheet">
+	<title>Dan Richardson - Freelance Web Developer, Derby</title>
+</head>
+
+<body class="font-body text-xl">
+
+    <div class="grid md:grid-cols-2" style="grid-auto-rows: 50vh;">
+        <div class="bg-black text-white center-mid">
+            <div>
+                <div class="font-title">
+                    <h1 class="text-5xl mb-10">Dan Richardson</h1>
+                    <h2 class="text-2xl">Freelance Web Developer, Derby</h2>
+                </div>
+            </div>
+        </div>
+        <div class="bg-white text-black center-mid">
+            <div class="font-title max-w-md">
+                <p class="mb-4">Websites should be effective, impactful, efficient, and <span class="inline-block">fast <span class="text-yellow-400">&#128498;</span></span></p>
+                <p><strong class="bg-black text-white p-2">Expect nothing less</strong> from your website.</p>
+            </div>
+        </div>
+        <div class="bg-white text-black center-mid">
+            <div class="max-w-md">
+                <h3 class="text-2xl font-title mb-10">&#127757; Is your website green?</h3>
+                <p class="mb-4">Conscious of your businesses' carbon footprint? Great, how?</p>
+                <p class="mb-4">Having an efficient website can reduce your businesses' carbon footprint, whilst still delivering your message effectively.</p>
+                <!-- <p>Find Out More</p> -->
+            </div>
+        </div>        
+        <div class="bg-black text-white center-mid">
+            <div class="font-body">
+                <h3 class="mb-4">Get in touch to find out more</h3>
+                <p>&#128386; <a href="mailto:info@danrichardson.net" class="underline">Drop me an email</a>.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="grid md:grid-cols-2">        
+        <div class="text-black center-mid py-16" style="background-color: lightcyan;">
+            <div class="max-w-md space-y-4">
+                <h3 class="text-2xl font-title mb-10">Who Am I?</h3>
+                <p>I have over 15 years experience in web development, from FTSE100 enterprise level backend development in .NET C# and Microsoft SQL Server, to small business frontend development using only HTML and CSS.</p>
+                <p>This time has also given me a large surface area for interaction with clients - and hopefully youself - to have really productive conversations and understand the needs of the business.</p>
+                <p>With a keen eye for detail and a tenacity to find solutions, no part of a website is left unloved.</p>
+            </div>
+        </div> 
+        <div class="bg-white text-black center-mid py-16">
+            <div class="max-w-md space-y-4">
+                <h4 class="text-2xl font-title mb-10">Skillsets</h4>
+                <p>Over my time in web development I have widened my skillset and touched a lot of different technologies to varying degrees of intimacy. Some of these are:</p>
+
+                <ul>
+                    <li><strong class="font-bold">Backend:</strong> .NET C#, SQL/MSSQL, MySQL, Redis, PHP, Docker, Git</li>
+                    <li><strong class="font-bold">Frontend:</strong> JavaScript, TypeScript, React, Astro, Next.js, Alpine.js, HTML, CSS <span class="text-xs">jQuery <span title="Face With Finger Covering Closed Lips">(&#129323;)</span></span></li>
+                    <li><strong class="font-bold">CMS:</strong> 100% Bespoke, CraftCMS, DatoCMS</li>
+                    <li><strong class="font-bold">Hosting:</strong> IIS, Netlify, Vercel, AWS</li>
+                </ul>
+            </div>
+        </div> 
+    </div>
+
+    <div class="p-8 text-sm">
+        <h4>Want to find out more about me?</h4>
+        <p>Feel free to <a href="mailto:info@danrichardson.net" class="underline">contact me</a>, or find me elsewhere on the internet&hellip;</p>
+    </div>
+    <div class="grid md:grid-cols-2" style="grid-auto-rows: 50vh;">
+        <a href="http://strava.com/athletes/danrichardson/" target="_blank" rel="nofollow" class="text-white center-mid space-y-10" style="background-color: #f05f26;">
+            <img src="https://danrichardson.net/images/strava.gif" alt="Strava" />
+            <div class="max-w-sm text-center">
+                Keeping the mind healthy by keeping my body healthy
+            </div>
+        </a>
+        <a href="http://open.spotify.com/user/danrichardson" target="_blank" rel="nofollow" class="text-black center-mid space-y-10" style="background-color: #1ed760;">
+            <img src="https://danrichardson.net/images/spotify.jpg" alt="Spotify" />
+            <div class="max-w-sm text-center">
+                Music to focus
+            </div>
+        </a>
+        <a href="http://twitter.com/danrichardson/" target="_blank" rel="nofollow" class="text-black center-mid space-y-10" style="background-color: #2daae1;">
+            <img src="https://danrichardson.net/images/twitter.gif" alt="Twitter" />
+            <div class="max-w-sm text-center">
+                Keeping in touch with the fast moving world
+            </div>
+        </a>
+        <a href="http://last.fm/user/danjrichardson" target="_blank" rel="nofollow" class="text-white center-mid space-y-10" style="background-color: #da1102;">
+            <img src="https://danrichardson.net/images/lastfm.gif" alt="last.fm" />
+            <div class="max-w-sm text-center">
+                Evidence of a wildly varied music taste!
+            </div>
+        </a>
+        
+    </div>
+    
+    <!-- <script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-859633-1']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
+	</script> -->
+</body>
+
+</html>
