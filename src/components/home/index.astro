@@ -58,28 +58,78 @@
         <h4>Want to find out more about me?</h4>
         <p>Feel free to <a href="mailto:info@danrichardson.net" class="underline">contact me</a>, or find me elsewhere on the internet&hellip;</p>
     </div>
+
+    <style lang="scss">
+        .social {
+            @apply space-y-10 transition-all duration-200;
+            @apply bg-center bg-no-repeat;
+            background-size: 0% 0%;
+
+            > img {
+                @apply p-2 bg-white rounded-md absolute delay-200;
+            }
+            > .social-text {
+                @apply max-w-sm text-center opacity-0 delay-500;
+            }
+            > img, > .social-text {
+                @apply transform transition-all duration-300;
+            }
+
+            &:hover {
+                background-size: 100% 100%;
+                > img {
+                    @apply -translate-y-full;
+                }
+                > .social-text {
+                    @apply translate-y-4 opacity-100;
+                }
+            }
+
+            &-strava {
+                @extend .social;
+                @apply text-white;                
+                background-image: radial-gradient(#f05f26, #f05f26);
+            }
+            &-spotify {
+                @extend .social;
+                @apply text-black;
+                background-image: radial-gradient(#1ed760, #1ed760);
+            }            
+            &-twitter {
+                @extend .social;
+                @apply text-black;
+                background-image: radial-gradient(#2daae1, #2daae1);
+            }
+            &-lastfm {
+                @extend .social;
+                @apply text-white;
+                background-image: radial-gradient(#da1102, #da1102);
+            }
+        }
+    </style>
+
     <div class="grid md:grid-cols-2" style="grid-auto-rows: 50vh;">
-        <a href="http://strava.com/athletes/danrichardson/" target="_blank" rel="nofollow" class="text-white center-mid space-y-10" style="background-color: #f05f26;">
+        <a href="http://strava.com/athletes/danrichardson/" target="_blank" rel="nofollow" class="center-mid social-strava">
             <img src="https://danrichardson.net/images/strava.gif" alt="Strava" />
-            <div class="max-w-sm text-center">
+            <div class="social-text">
                 Keeping the mind healthy by keeping my body healthy
             </div>
         </a>
-        <a href="http://open.spotify.com/user/danrichardson" target="_blank" rel="nofollow" class="text-black center-mid space-y-10" style="background-color: #1ed760;">
+        <a href="http://open.spotify.com/user/danrichardson" target="_blank" rel="nofollow" class="center-mid social-spotify">
             <img src="https://danrichardson.net/images/spotify.jpg" alt="Spotify" />
-            <div class="max-w-sm text-center">
+            <div class="social-text">
                 Music to focus
             </div>
         </a>
-        <a href="http://twitter.com/danrichardson/" target="_blank" rel="nofollow" class="text-black center-mid space-y-10" style="background-color: #2daae1;">
+        <a href="http://twitter.com/danrichardson/" target="_blank" rel="nofollow" class="center-mid social-twitter">
             <img src="https://danrichardson.net/images/twitter.gif" alt="Twitter" />
-            <div class="max-w-sm text-center">
+            <div class="social-text">
                 Keeping in touch with the fast moving world
             </div>
         </a>
-        <a href="http://last.fm/user/danjrichardson" target="_blank" rel="nofollow" class="text-white center-mid space-y-10" style="background-color: #da1102;">
+        <a href="http://last.fm/user/danjrichardson" target="_blank" rel="nofollow" class="center-mid social-lastfm">
             <img src="https://danrichardson.net/images/lastfm.gif" alt="last.fm" />
-            <div class="max-w-sm text-center">
+            <div class="social-text">
                 Evidence of a wildly varied music taste!
             </div>
         </a>
