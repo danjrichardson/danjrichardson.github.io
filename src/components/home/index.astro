@@ -8,13 +8,13 @@
                 </div>
             </div>
         </div>
-        <div class="bg-white text-black center-mid">
+        <div class="text-black center-mid">
             <div class="font-title max-w-md">
                 <p class="mb-4">Websites should be effective, impactful, efficient, and <span class="inline-block">fast <span class="text-yellow-400">&#128498;</span></span></p>
                 <p><strong class="bg-black text-white p-2">Expect nothing less</strong> from your website.</p>
             </div>
         </div>
-        <div class="bg-white text-black center-mid">
+        <div class="text-black center-mid">
             <div class="max-w-md">
                 <h3 class="text-2xl font-title mb-10">&#127757; Is your website green?</h3>
                 <p class="mb-4">Conscious of your businesses' carbon footprint? Great, how?</p>
@@ -39,7 +39,7 @@
                 <p>With a keen eye for detail and a tenacity to find solutions, no part of a website is left unloved.</p>
             </div>
         </div> 
-        <div class="bg-white text-black center-mid py-16">
+        <div class="text-black center-mid py-16">
             <div class="max-w-md space-y-4">
                 <h4 class="text-2xl font-title mb-10">Skillsets</h4>
                 <p>Over my time in web development I have widened my skillset and touched a lot of different technologies to varying degrees of intimacy. Some of these are:</p>
@@ -61,9 +61,22 @@
 
     <style lang="scss">
         .social {
-            @apply space-y-10 transition-all duration-200;
+            @apply space-y-10 transition-all duration-200 overflow-hidden relative;
             @apply bg-center bg-no-repeat;
             background-size: 0% 0%;
+
+            // &:after {
+            //     content: "";
+            //     width: 30px;
+            //     height: 30px;
+            //     position: absolute;
+            //     top: 98%;
+            //     right: -15px;
+            //     background: #f00;
+            //     transform: rotate(45deg);
+            //     z-index: 0;
+            //     @apply transition-transform duration-200
+            // }
 
             > img {
                 @apply p-2 bg-white rounded-md absolute delay-200;
@@ -77,11 +90,19 @@
 
             &:hover {
                 background-size: 100% 100%;
+
+                // &:after {
+                //     transform: rotate(45deg) scale(35) translate(-50%);
+                // }
                 > img {
                     @apply -translate-y-full;
                 }
                 > .social-text {
                     @apply translate-y-4 opacity-100;
+
+                    &:after {
+                        @apply translate-y-full;
+                    }
                 }
             }
 

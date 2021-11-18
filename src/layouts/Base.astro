@@ -1,4 +1,6 @@
 ---
+import MainNav from '../components/nav/main.jsx';
+
 const { title = "" } = Astro.props;
 ---
 <html lang="en">
@@ -17,7 +19,11 @@ const { title = "" } = Astro.props;
 
 <body>
 
-    <slot />
+	<MainNav client:load />
+
+	<div class="relative z-10">
+    	<slot />
+	</div>
     
     <!-- <script type="text/javascript">
 

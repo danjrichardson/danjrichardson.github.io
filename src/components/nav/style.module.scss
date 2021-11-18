@@ -1,0 +1,103 @@
+.bg {
+    background-color: #4158D0;
+    background-image: linear-gradient(8deg, #62ff0000 0%, #50acc8 61%, #2196f3 100%),
+        linear-gradient(319deg, #4158D0 0%, #C850C0 31%, #FFCC70 100%);
+}
+
+// === Variables =====
+$perspective:     60rem;
+$font-size:       12vmin;
+$split-position:  49%;
+$split-thickness: 4px;
+$split-color:     #FF2C75;
+
+// === Settings =====
+%font-settings {
+  font-family: "Gilroy ExtraBold", system-ui, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-font-kerning: normal;
+  -webkit-text-size-adjust: 100%;
+}
+
+// === Codepen Setup =====
+// body {
+//   @extend %font-settings;
+//   transform-style: preserve-3d;
+//   transform: perspective($perspective);
+//   position: fixed;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center; 
+// }
+
+.menu {
+    
+}
+
+// === Menu <ul> =====
+.menuList {
+  font-size: $font-size;
+  line-height: 1.2;
+  text-transform: uppercase;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: rotateX(-10deg) rotateY(20deg); // overwritten by JS
+}
+
+// === Menu item =====
+.menuListItem {
+  position: relative;
+  color: transparent;
+  cursor: pointer;
+  text-shadow: -5px -5px 0px #000;
+  
+  // === Split Line =====
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: $split-position;
+    left: -10%;
+    right: -10%;
+    height: $split-thickness;
+    border-radius: $split-thickness;
+    //margin-top: math.div($split-thickness, 2);
+    background: $split-color;
+    transform: scale(0);
+    transition: transform .8s cubic-bezier(.16,1.08,.38,.98);
+    z-index: 1;
+  }
+}
+
+// === Top/bottom mask =====
+.itemMask {
+  display: block;
+  position: absolute;
+  overflow: hidden;
+  color: $split-color;
+  top: 0;
+  height: $split-position;
+  transition: all .8s cubic-bezier(.16,1.08,.38,.98);
+  
+  span { display: block; }
+}
+
+// === Bottom mask specific =====
+.itemMask + .itemMask {
+  top: $split-position - 0.1;
+  height: 100 - $split-position + 0.1;
+  
+  span { transform: translateY(-$split-position); }
+}
+
+// === Where the fun stuff happens =====
+.menuListItem:hover,
+.menuListItem:active {
+  .itemMask { color: #FFF; transform: skewX(12deg) translateX(5px); }
+  .itemMask + .itemMask { transform: skewX(12deg) translateX(-5px); }
+  &::before { transform: scale(1); }
+}
