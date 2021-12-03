@@ -4,6 +4,36 @@
         linear-gradient(319deg, #4158D0 0%, #C850C0 31%, #FFCC70 100%);
 }
 
+.menuButton {
+  @apply fixed top-0 right-0 p-10 text-black z-40;  
+
+  &:after {
+    content: "";
+    @apply block w-full h-px bg-current;
+  }
+}
+
+.menuButtonClosed {
+  &:before {
+    content: "";
+    will-change: clip-path;
+    transition-property: clip-path, opacity;
+    transition-duration: 300ms, 600ms;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    @apply block bg-black absolute inset-0 -z-1 opacity-0 ease-in-out;
+  }
+
+  &:hover, &:focus {
+    @apply text-white;
+
+    &:before {
+      transition-duration: 300ms;
+      clip-path: polygon(20% 20%, 80% 10%, 90% 90%, 10% 90%);
+      @apply opacity-100;
+    }
+  }
+}
+
 // === Variables =====
 $perspective:     60rem;
 $font-size:       12vmin;

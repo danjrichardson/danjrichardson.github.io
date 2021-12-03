@@ -1,22 +1,24 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import Styles from './style.module.scss';
 
 const Main = () => {
 
     const [menuOpen, toggleMenu] = useState(false);
     const [menuClass, setMenuClass] = useState('');
+    const menuRef = useRef(null);
 
     useEffect(() => {
         if (menuOpen){
             setMenuClass('opacity-100 z-30')
         } else {
-            setMenuClass('opacity-40 z-0') 
+            setMenuClass('opacity-40 z-0') ;
+            menuRef.current.blur();
         }
     }, [menuOpen])
 
     return <>
-        <button className="fixed top-10 right-10 z-40" onClick={() => toggleMenu(!menuOpen)}>
-            MENU
+        <button className={`${Styles.menuButton} ${!menuOpen && Styles.menuButtonClosed}`} ref={menuRef} onClick={() => toggleMenu(!menuOpen)}>
+            {menuOpen ? 'CLOSE' : 'MENU'}
         </button>
         <div className={`fixed inset-0 flex flex-col items-center justify-center transition-opacity duration-500 ${Styles.bg} ${menuClass}`}>
             
