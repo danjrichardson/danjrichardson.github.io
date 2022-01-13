@@ -25,24 +25,28 @@ const Main = () => {
             <div className={`${Styles.menu} transition-opacity ${menuOpen ? 'opacity-100 duration-300 delay-300' : 'opacity-0'}`}>
                 <ul className={Styles.menuList} data-offset="10">
                     <li className={Styles.menuListItem} data-offset="20">
-                        Home
-                        <span className={Styles.itemMask} aria-hidden="true"><span>Home</span></span>
-                        <span className={Styles.itemMask} aria-hidden="true"><span>Home</span></span>
+                        <a href="/">Home
+                            <span className={Styles.itemMask} aria-hidden="true"><span>Home</span></span>
+                            <span className={Styles.itemMask} aria-hidden="true"><span>Home</span></span>
+                        </a>
                     </li>
                     <li className={Styles.menuListItem} data-offset="16">
-                        About
-                        <span className={Styles.itemMask} aria-hidden="true"><span>About</span></span>
-                        <span className={Styles.itemMask} aria-hidden="true"><span>About</span></span>
+                        <a href="/about">About
+                            <span className={Styles.itemMask} aria-hidden="true"><span>About</span></span>
+                            <span className={Styles.itemMask} aria-hidden="true"><span>About</span></span>
+                        </a>
                     </li>
                     <li className={Styles.menuListItem} data-offset="12">
-                        Work
-                        <span className={Styles.itemMask} aria-hidden="true"><span>Work</span></span>
-                        <span className={Styles.itemMask} aria-hidden="true"><span>Work</span></span>
+                        <a href="/work">Work
+                            <span className={Styles.itemMask} aria-hidden="true"><span>Work</span></span>
+                            <span className={Styles.itemMask} aria-hidden="true"><span>Work</span></span>
+                        </a>
                     </li>
                     <li className={Styles.menuListItem} data-offset="8">
-                        Contact
-                        <span className={Styles.itemMask} aria-hidden="true"><span>Contact</span></span>
-                        <span className={Styles.itemMask} aria-hidden="true"><span>Contact</span></span>
+                        <a href="/contact">Contact
+                            <span className={Styles.itemMask} aria-hidden="true"><span>Contact</span></span>
+                            <span className={Styles.itemMask} aria-hidden="true"><span>Contact</span></span>
+                        </a>
                     </li>
                 </ul>
             </div>
