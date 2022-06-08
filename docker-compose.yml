@@ -1,0 +1,15 @@
+version: '3.5'
+services:
+
+  buildchain:
+    build:
+      context: .
+      dockerfile: ./docker-config/buildchain/Dockerfile
+    environment:
+      NODE_ENV: development
+    ports:
+      - 3000:3000
+      - 3001:3001
+    tty: true
+    volumes:
+      - ./ui.src:/var/www/project/ui.src:cached

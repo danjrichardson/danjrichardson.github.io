@@ -17,8 +17,7 @@
   &:before {
     content: "";
     will-change: clip-path;
-    transition-property: clip-path, opacity;
-    transition-duration: 300ms, 600ms;
+    transition: clip-path 300ms, opacity 600ms;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     @apply block bg-black absolute inset-0 -z-1 opacity-0 ease-in-out;
   }

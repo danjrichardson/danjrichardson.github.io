@@ -1,3 +1,6 @@
+import { defineConfig } from 'astro/config'
+import react from '@astrojs/react';
+
 // Full Astro Configuration API Documentation:
 // https://docs.astro.build/reference/configuration-reference
 
@@ -7,10 +10,16 @@
 // You can disable this by removing "@ts-check" and `@type` comments below.
 
 // @ts-check
-export default /** @type {import('astro').AstroUserConfig} */ ({
-  // Comment out "renderers: []" to enable Astro's default component support.
-  renderers: ['@astrojs/renderer-react'],
-  devOptions: {
-    tailwindConfig: './tailwind.config.js'
-  }
+export default defineConfig({
+  alias: {
+      $: './src',
+      '$api': './src/api',
+  },
+  integrations: [react()],
+  server: {
+    host: '0.0.0.0',
+    port: 3000
+  },
+  site: 'https://danrichardson.net',
+  vite: {},
 });

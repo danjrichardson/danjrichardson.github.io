@@ -1,6 +1,7 @@
 module.exports = {
-    mode: 'jit',
-    purge: ['./src/**/*.{astro,html,js,jsx,svelte,ts,tsx,vue}'],
+    content: [
+      './src/**/*.{astro,html,js,jsx,ts,tsx}'
+    ],
     theme: {
       fontFamily: {
         'title': ['Major Mono Display', 'monospace'],
