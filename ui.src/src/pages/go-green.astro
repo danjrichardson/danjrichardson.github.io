@@ -2,5 +2,54 @@
 import BaseLayout from '../layouts/Base.astro'
 ---
 <BaseLayout>
-    Green
+    <div class="font-body text-xl">
+        <div class="grid md:grid-cols-2" style="grid-auto-rows: 50vh;">        
+            <div class="bg-[#3a9a00] text-white center-mid">
+                <div>
+                    <div class="font-title">
+                        <h1 class="text-5xl mb-10">Green websites?</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="text-black center-mid">
+                <div class="max-w-md space-y-4">
+                    <p class="leading-9">Importance of green, how it helps you and your visitors</p>
+                </div>
+            </div>
+        </div>
+    
+        <div class="grid md:grid-cols-2" style="grid-auto-rows: 50vh;">         
+            <div class="bg-black text-white center-mid md:order-2">
+                <div>
+                    <div class="font-title">
+                        <h2 class="text-5xl">How it's done</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="text-black center-mid md:order-1">
+                <div class="max-w-md space-y-4">
+                    <p>How it's achieved, optimised, responsive imagery, green hosting, optimised resources (JS, css), not using full JS libraries if it's not needed - vanilla js</p>
+                </div>
+            </div>   
+        </div>
+    
+        <div class="grid md:grid-cols-2" style="grid-auto-rows: 50vh;">        
+            <div class="bg-black text-white center-mid">
+                <div>
+                    <h2 class="font-title text-5xl">Technologies to achieve it</h2>
+                </div>
+            </div>
+            <div class="text-black center-mid">
+                <div class="max-w-md space-y-4">
+                    <p>Using some of the latest technologies in modern website development, projects are delivered using:</p>
+                    <ul>
+                        <li><strong class="font-bold">(Optional) CMS:</strong> CraftCMS, DatoCMS/Prismic/Sanity</li>
+                        <li><strong class="font-bold">Frameworks:</strong> Astro.build</li>
+                        <li><strong class="font-bold">Hosting:</strong> Servd.host, Netlify</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    
+    </div>     
 </BaseLayout>
