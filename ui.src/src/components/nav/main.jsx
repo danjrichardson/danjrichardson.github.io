@@ -20,7 +20,7 @@ const Main = () => {
         <button className={`${Styles.menuButton} ${!menuOpen && Styles.menuButtonClosed}`} ref={menuRef} onClick={() => toggleMenu(!menuOpen)}>
             {menuOpen ? 'CLOSE' : 'MENU'}
         </button>
-        <div className={`fixed inset-0 flex flex-col items-center justify-center transition-opacity duration-500 ${Styles.bg} ${menuClass}`}>
+        <div id="bg" className={`fixed inset-0 flex flex-col items-center justify-center transition-opacity duration-500 ${Styles.bg} ${menuClass}`}>
             
             <div className={`${Styles.menu} transition-opacity ${menuOpen ? 'opacity-100 duration-300 delay-300' : 'opacity-0'}`}>
                 <ul className={Styles.menuList} data-offset="10">

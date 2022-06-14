@@ -24,6 +24,21 @@ const { title = "" } = Astro.props;
 	<div class="relative z-10">
     	<slot />
 	</div>
+
+	<script>
+		document.addEventListener('DOMContentLoaded', function(){
+			const bg = document.querySelector('#bg');
+			window.addEventListener('mousemove', ({ clientX, clientY }) => {
+				const { x, y, width, height } = bg.getBoundingClientRect();
+				const dx = clientX - (x + 0.5 * width);
+				const dy = clientY - (y + 0.5 * height);
+				const angle = Math.atan2(dy, dx) * 180 / Math.PI;
+				
+				bg.style.setProperty('--startDeg', `${angle + 90}deg`);
+				
+			}, false)
+		})
+	</script>
     
     <!-- <script type="text/javascript">
 
