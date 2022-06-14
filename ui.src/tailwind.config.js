@@ -4,8 +4,8 @@ module.exports = {
     ],
     theme: {
       fontFamily: {
-        'title': ['Major Mono Display', 'monospace'],
-        'body': ['DM Mono', 'monospace']
+        'title': ['Cutive Mono', 'monospace'],
+        'body': ['Cutive Mono', 'monospace']
       },
       extend: {
         zIndex: {
