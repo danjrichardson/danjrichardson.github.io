@@ -1,4 +1,10 @@
 ---
-
 ---
-<div>MENU</div>
+<script hoist>
+    import init from './main.js';
+    init();
+</script>
+<button id="menuButton" class={`menuButton`}>
+    MENU
+</button>
+<div id="menuHighlight" class="fixed top-16 right-0 w-full h-px bg-black z-40"></div>

@@ -1,5 +1,5 @@
 ---
-import MainNav from '../components/nav/main.jsx';
+import MainNav from '../components/nav/main.astro';
 import '../css/global.pcss';
 
 const { title = "" } = Astro.props;
@@ -18,7 +18,7 @@ const { title = "" } = Astro.props;
 </head>
 
 <body>
-
+	<div id="bg" class={`bg fixed inset-0 opacity-40 z-0`}></div>
 	<MainNav client:load />
 
 	<div class="relative z-10">
