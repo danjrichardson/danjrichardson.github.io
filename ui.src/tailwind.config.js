@@ -8,6 +8,9 @@ module.exports = {
         'body': ['Cutive Mono', 'monospace']
       },
       extend: {
+        gridAutoRows: {
+          'screen-1/2': '50vh'
+        },
         zIndex: {
          '-1': '-1',
         }
