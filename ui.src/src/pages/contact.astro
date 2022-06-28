@@ -1,19 +1,10 @@
 ---
 import BaseLayout from '../layouts/Base.astro'
 ---
-<style>
-    @supports (-webkit-background-clip: text) {
-        .gradient-heading {
-            background: linear-gradient(to right,#e03da6,#7c13ff,#416199,#33758c);
-            -webkit-text-fill-color: transparent;
-            -webkit-background-clip: text;
-        }
-    }
-</style>
 <BaseLayout>
     <div class="font-body text-xl">
         <div class="relative h-screen flex flex-col justify-center text-center px-5 sm:text-2xl">
-            <h1 class="text-5xl gradient-heading mb-10">Get in touch</h1>
+            <h1 class="self-center text-5xl gradient-heading mb-10">Get in touch</h1>
             <div class="max-w-lg mx-auto">
                 <p>The best way to get in touch is by email and I'll try getting back to you as soon as I can.</p>
                 <p class="mt-6">Feel free to ask me any questions you may have; there is no such thing as a silly question.</p>

@@ -3,4 +3,11 @@
     .center-mid {
         @apply flex flex-col justify-center items-center p-4 sm:p-8;
     }
+    @supports (-webkit-background-clip: text) {
+        .gradient-heading {
+            background: linear-gradient(to right,#e03da6,#7c13ff,#416199,#33758c);
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+        }
+    }
 }
