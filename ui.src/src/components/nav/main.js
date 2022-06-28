@@ -29,9 +29,9 @@ const init = () => {
         .to(menuHighlight, { x: 0, duration: 0.1 } )
         .set(menuHighlight, { width: '100%' })
         .addLabel('opening')
-        .to(menuHighlight, { x: highlightLeft * -1, duration: 0.6 })
+        .to(menuHighlight, { x: highlightLeft * -1, duration: 0.4 })
         .to(menuHighlight, { opacity: 0.1, duration: .2 })
-        .to(menuContents, { y: 0, ease: Expo.easeInOut, duration: .8 }, '-=.2')
+        .to(menuContents, { y: 0, ease: Expo.easeInOut, duration: .8 }, '-=.4')
         .from(menuContentItems, { y: '-50%', opacity: 0, stagger: .05, duration: .4 }, '-=.4')
         .addLabel('itemsStagger')
         .addLabel('open');
