@@ -2,6 +2,15 @@
 import BaseLayout from '../layouts/Base.astro'
 import ArrowRight from '../images/arrow-right.svg?raw';
 ---
+<style>
+    @supports (-webkit-background-clip: text) {
+        .gradient-heading {
+            background: linear-gradient(to right,#e03da6,#7c13ff,#416199,#33758c);
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+        }
+    }
+</style>
 <BaseLayout>
     <div class="font-body text-xl">
         <div class="relative h-screen flex flex-col justify-center text-center text-2xl">
@@ -11,47 +20,47 @@ import ArrowRight from '../images/arrow-right.svg?raw';
                 <div class="fill-orange-500 rotate-90" set:html={ArrowRight}></div>
             </button>
         </div>
-        <section class="grid md:grid-cols-2" style="grid-auto-rows: 50vh;">        
-            <div class="bg-black text-white center-mid">
+        <section class="grid md:grid-cols-2 md:auto-rows-screen-1/2">        
+            <div class="bg-black/5 center-mid">
                 <div>
                     <div class="font-title">
-                        <h2 class="text-5xl mb-10" id="effective">Effective</h2>
+                        <h2 class="text-5xl gradient-heading" id="effective">Effective</h2>
                     </div>
                 </div>
             </div>
             <div class="text-black center-mid">
-                <div class="max-w-md space-y-4">
+                <div class="max-w-md space-y-6">
                     <p class="font-bold">Anything new should be built to address the original goals, if it doesn't then the website is simply not going to be effective.</p>
                     <p>We'll work together to understand what those goals are to make sure that your website will be effective.</p>
                 </div>
             </div>
         </section>
     
-        <section class="grid md:grid-cols-2" style="grid-auto-rows: 50vh;">         
-            <div class="bg-black text-white center-mid md:order-2">
+        <section class="grid md:grid-cols-2 md:auto-rows-screen-1/2">         
+            <div class="bg-black/5 center-mid md:order-2">
                 <div>
                     <div class="font-title">
-                        <h2 class="text-5xl" id="impactful">Impactful</h2>
+                        <h2 class="text-5xl gradient-heading" id="impactful">Impactful</h2>
                     </div>
                 </div>
             </div>
             <div class="text-black center-mid md:order-1">
-                <div class="max-w-md space-y-4">
+                <div class="max-w-md space-y-6">
                     <p>A site that is effective by being fast and efficient, will be impactful. The design of the website (and it's content) is symptahetic and relates to your users, plays a key role in a website leaving a positive impression.</p>
                 </div>
             </div>   
         </section>
 
         <section class="grid md:grid-cols-2">
-            <div class="bg-black text-white center-mid">
+            <div class="bg-black/5 center-mid">
                 <div>
                     <div class="font-title">
-                        <h2 class="text-5xl mb-10" id="efficient">Efficient</h2>
+                        <h2 class="text-5xl gradient-heading" id="efficient">Efficient</h2>
                     </div>
                 </div>
             </div>
-            <div class="text-black center-mid">
-                <div class="max-w-md space-y-4">
+            <div class="text-black center-mid py-14 lg:py-28">
+                <div class="max-w-md space-y-6">
                     <p>Tied closely to websites being fast, efficient websites really drive a users overall impression of a website. It's common knowledge that webpage speed greatly affects bounce rates, ecommerce conversion rates, and user experience, and the way websites are built are one of the main factors that affect page speed.</p>
                     <p>Poorly built websites that have no been carefully made, serving unnecessary/bloated resources and incorrect image sizes, and various other factors all play a major role in a website being efficient.</p>
                     <p><a href="/go-green" class="border-b border-current">Green websites</a> hold the trump card for efficient websites and will often wipe the floor with sites that are not built with efficiency in mind.</p>
@@ -60,15 +69,15 @@ import ArrowRight from '../images/arrow-right.svg?raw';
         </section>
     
         <section class="grid md:grid-cols-2">         
-            <div class="bg-black text-white center-mid md:order-2">
+            <div class="bg-black/5 center-mid md:order-2">
                 <div>
                     <div class="font-title">
-                        <h2 class="text-5xl" id="fast">Fast</h2>
+                        <h2 class="text-5xl gradient-heading" id="fast">Fast</h2>
                     </div>
                 </div>
             </div>
-            <div class="text-black center-mid md:order-1">
-                <div class="max-w-md space-y-4">
+            <div class="text-black center-mid md:order-1 py-14 lg:py-28">
+                <div class="max-w-md space-y-6">
                     <p>Pre-generated (or static) websites will always be quicker than a website that generates the page everytime it is requested.</p>
                     <p>This doesn't mean that they are any less of a website though, and they are generally the best way to create a marketing/content/business website.</p>
                     <p>These websites can be made in a variety of ways, with or without a content management system (CMS), and can be made available to users all around the world so it's really fast for everyone.</p>
