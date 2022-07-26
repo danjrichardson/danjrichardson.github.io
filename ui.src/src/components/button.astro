@@ -5,6 +5,11 @@ export interface Props
 }
 const { url } = Astro.props;
 ---
+<style>
+    .arrow-button:hover {
+        border-image: linear-gradient(to right, #e03da6,#7c13ff,#416199,#33758c) 1;
+    }
+</style>
 <style global>
     .arrow-button.group:hover .arrow-1 {
         animation: arrow1-move .75s linear infinite forwards;
