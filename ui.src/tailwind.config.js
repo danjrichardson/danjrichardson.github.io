@@ -4,8 +4,10 @@ module.exports = {
     ],
     theme: {
       fontFamily: {
-        'title': ['Cutive Mono', 'monospace'],
-        'body': ['Cutive Mono', 'monospace']
+        'title': ['Nunito', 'sans-serif'],
+        'body': ['Nunito', 'sans-serif'],
+        'body-alt': ['Roboto', 'sans-serif'],
+        'lead-in': ['d-dincondenseddinCnBd', 'sans-serif'],
       },
       extend: {
         gridAutoRows: {
