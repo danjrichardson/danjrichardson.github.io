@@ -4,22 +4,42 @@ import Button from 'components/button.astro';
 import LeadInText from "../components/copy/lead-in-text.astro";
 ---
 <style>
-    .effective, .impactful, .efficient, .fast {
-        line-height: 0.25rem;
-        display: inline-block;
-        padding: 0 0.25rem;
-    }
     .effective {
-        border-bottom: 0.5rem solid #d377ba4d;
+        color: #d377ba;
     }
     .impactful {
-        border-bottom: 0.5rem solid #8877d34d;
+        color: #8877d3;
     }
     .efficient {
-        border-bottom: 0.5rem solid #3597ac4d;
+        color: #3597ac;
     }
     .fast {
-        border-bottom: 0.5rem solid #d998424d;
+        color: #d99842;
+    }
+
+    .ticker {
+        display: inline-block;
+        vertical-align: middle;
+        width: min-content;
+        height: 2.5rem;
+        overflow: hidden;
+    }
+    .ticker-list {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        animation: ticker 8s ease-in-out infinite;
+    }
+    @keyframes ticker {
+        0% { transform: translateY(0%); }
+        22% { transform: translateY(-0%); }
+        25% { transform: translateY(-100%); }
+        47% { transform: translateY(-100%); }
+        50% { transform: translateY(-200%); }
+        72% { transform: translateY(-200%); }
+        75% { transform: translateY(-300%); }
+        97% { transform: translateY(-300%); }
+        100% { transform: translateY(-400%); }
     }
 </style>
 <BaseLayout>
@@ -35,11 +55,17 @@ import LeadInText from "../components/copy/lead-in-text.astro";
             </div>
             <div class="text-black center-mid">
                 <div class="font-title max-w-md uppercase leading-relaxed">
-                    <p class="mb-0">Websites should be 
-                        <a href="/build#effective" ><span class="effective">effective</span></a>,
-                        <a href="/build#impactful"><span class="impactful">impactful</span></a>,
-                        <a href="/build#efficient"><span class="efficient">efficient</span></a>, and
-                        <a href="/build#fast"><span class="fast inline-block">fast &#128498;</span></a></p>
+                    <p class="flex gap-x-1.5 mb-0 font-lead-in text-4xl">Websites should be 
+                        <span class="ticker">
+                            <span class="ticker-list">
+                                <a class="tick-item" href="/build#effective" ><span class="effective">effective</span></a>
+                                <a class="tick-item" href="/build#impactful"><span class="impactful">impactful</span></a>
+                                <a class="tick-item" href="/build#efficient"><span class="efficient">efficient</span></a>
+                                <a class="tick-item" href="/build#fast"><span class="fast inline-block">fast &#128498;</span></a>
+                                <a class="tick-item" href="/build#effective" ><span class="effective">effective</span></a>
+                            </span>
+                        </span>
+                    </p>
                     <p><strong>Expect nothing less</strong> from your website.</p>
                 </div>
             </div>
