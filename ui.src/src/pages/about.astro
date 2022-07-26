@@ -1,5 +1,7 @@
 ---
-import BaseLayout from '../layouts/Base.astro'
+import BaseLayout from '../layouts/Base.astro';
+import LongCopy from '../components/copy/long-copy.astro';
+import LeadInText from "../components/copy/lead-in-text.astro";
 const yearStart = 2006;
 const yearsSince = new Date().getFullYear() - yearStart;
 // THINGS I CAN DO:<br />
@@ -8,63 +10,60 @@ const yearsSince = new Date().getFullYear() - yearStart;
 ---
 <BaseLayout>
 	
-    <div class="font-body text-xl">
-        <section class="grid md:grid-cols-2 auto-rows-screen-1/2">        
-            <div class="bg-black/5 center-mid">
-                <h1 class="text-5xl gradient-heading">Who Am I?</h1>
-            </div>
-            <div class="text-black center-mid">
-                <div class="max-w-md space-y-4">
-                    <p class="leading-9">I am a <strong class="bg-white/40  p-2">freelance web developer</strong> based in Derbyshire, UK, with over <strong class="bg-white/40 p-2">{yearsSince} years</strong> experience in web development and making websites.</p>
-                </div>
-            </div>
-        </section>
-    
-        <section class="grid md:grid-cols-2 auto-rows-screen-1/2">         
-            <div class="bg-black/5 center-mid md:order-2">
-                <h2 class="text-5xl gradient-heading">What do I do?</h2>
-            </div>
-            <div class="text-black center-mid md:order-1">
-                <div class="max-w-md space-y-4">
-                    <p>Having worked on so many websites, my work has spanned from FTSE100 enterprise level development in .NET C# and Microsoft SQL Server, to creating simple business marketing websites in HTML and CSS.</p>
-                    <p>Now, having more focus as a freelance web developer, I love concentrating on building <span class="inline-block">fast <span class="text-yellow-400">&#128498;</span></span> and <span class="inline-block">efficient <span class="text-green-400">&#127757;</span></span> websites, that are pleasing to the eye and as accessible to use for as many people as possible.</p>
-                </div>
-            </div>   
-        </section>
-    
-        <section class="grid md:grid-cols-2 auto-rows-screen-1/2">        
-            <div class="bg-black/5 center-mid">
-                <h2 class="text-5xl gradient-heading">Technologies I Use</h2>
-            </div>
-            <div class="text-black center-mid">
-                <div class="max-w-md space-y-4">
-                    <p>Using some of the latest technologies in modern website development, projects are delivered using:</p>
-                    <ul class="space-y-2">
-                        <li><strong class="font-bold">CMS:</strong> 100% Bespoke, CraftCMS, Sanity</li>
-                        <li><strong class="font-bold">Frameworks:</strong> .net Core, Next.js, Astro.build</li>
-                        <li><strong class="font-bold">SaaS:</strong> Shopify, Webflow</li>
-                        <li><strong class="font-bold">Tools:</strong> VS Code, Docker, Git, GSAP</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-    
-        <section class="grid md:grid-cols-2 auto-rows-screen-1/2">        
-            <div class="bg-black/5 center-mid md:order-1">
-                <h2 class="text-5xl gradient-heading">Skillsets</h2>
-            </div>
-            <div class="text-black center-mid">
-                <div class="max-w-md space-y-4">
-                    <p>Over my time in web development I have widened my skillset and touched a lot of different technologies to varying degrees of intimacy. Some of these are (but not limited to):</p>
-                    <ul class="space-y-4">
-                        <li><strong class="font-bold">Backend:</strong> .NET C#, .net Core, SQL/MSSQL, MySQL, Redis, PHP, Docker, Git</li>
-                        <li><strong class="font-bold">Frontend:</strong> JavaScript, TypeScript, React, Next.js, Alpine.js, Astro, Vue.js, HTML, CSS, <span class="text-xs">and jQuery <span title="Face With Finger Covering Closed Lips">(&#129323;)</span></span></li>
-                        <li><strong class="font-bold">Hosting:</strong> IIS, Linux/Ubuntu</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-    </div>     
+    <section>
+        <LongCopy title="About me, what I do, and I achieve it">
+            <Fragment slot="lead-in">
+                <LeadInText tag="h2">
+                    Who I am
+                </LeadInText>
+            </Fragment>
+            <Fragment slot="copy">
+                <p class="leading-9">I am a <strong>freelance web developer</strong> based in Derbyshire, UK, with over <strong>{yearsSince} years</strong> experience in web development and making websites.</p>
+            </Fragment>
+        </LongCopy>
+        <LongCopy>
+            <Fragment slot="lead-in">
+                <LeadInText tag="h2">
+                    What do I do?
+                </LeadInText>
+            </Fragment>
+            <Fragment slot="copy">
+                <p>Having worked on so many websites, my work has spanned from FTSE100 enterprise level development in .NET C# and Microsoft SQL Server, to creating simple business marketing websites in HTML and CSS.</p>
+                <p>Now, having more focus as a freelance web developer, I love concentrating on building <span class="inline-block">fast <span class="text-yellow-400">&#128498;</span></span> and <span class="inline-block">efficient <span class="text-green-400">&#127757;</span></span> websites, that are pleasing to the eye and as accessible to use for as many people as possible.</p>
+            </Fragment>
+        </LongCopy>
+        <LongCopy>
+            <Fragment slot="lead-in">
+                <LeadInText tag="h2">
+                    Technologies I Use
+                </LeadInText>
+            </Fragment>
+            <Fragment slot="copy">
+                <p>Using some of the latest technologies in modern website development, projects are delivered using:</p>
+                <ul class="space-y-2">
+                    <li><strong class="font-bold">CMS:</strong> 100% Bespoke, CraftCMS, Sanity</li>
+                    <li><strong class="font-bold">Frameworks:</strong> .net Core, Next.js, Astro.build</li>
+                    <li><strong class="font-bold">SaaS:</strong> Shopify, Webflow</li>
+                    <li><strong class="font-bold">Tools:</strong> VS Code, Docker, Git, GSAP</li>
+                </ul>
+            </Fragment>
+        </LongCopy>
+        <LongCopy>
+            <Fragment slot="lead-in">
+                <LeadInText tag="h2">
+                    Skillset
+                </LeadInText>
+            </Fragment>
+            <Fragment slot="copy">
+                <p>Over my time in web development I have widened my skillset and touched a lot of different technologies to varying degrees of intimacy. Some of these are (but not limited to):</p>
+                <ul class="space-y-4">
+                    <li><strong class="font-bold">Backend:</strong> .NET C#, .net Core, SQL/MSSQL, MySQL, Redis, PHP, Docker, Git</li>
+                    <li><strong class="font-bold">Frontend:</strong> JavaScript, TypeScript, React, Next.js, Alpine.js, Astro, Vue.js, HTML, CSS, <span class="text-xs">and jQuery <span title="Face With Finger Covering Closed Lips">(&#129323;)</span></span></li>
+                    <li><strong class="font-bold">Hosting:</strong> IIS, Linux/Ubuntu</li>
+                </ul>
+            </Fragment>
+        </LongCopy>
+    </section>
 
     <div class="p-8 text-center">
         <h4>Want to find out more about me?</h4>
