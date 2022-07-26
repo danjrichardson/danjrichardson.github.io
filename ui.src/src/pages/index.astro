@@ -3,6 +3,25 @@ import BaseLayout from '../layouts/Base.astro'
 import Button from 'components/button.astro';
 import LeadInText from "../components/copy/lead-in-text.astro";
 ---
+<style>
+    .effective, .impactful, .efficient, .fast {
+        line-height: 0.25rem;
+        display: inline-block;
+        padding: 0 0.25rem;
+    }
+    .effective {
+        border-bottom: 0.5rem solid #d377ba4d;
+    }
+    .impactful {
+        border-bottom: 0.5rem solid #8877d34d;
+    }
+    .efficient {
+        border-bottom: 0.5rem solid #3597ac4d;
+    }
+    .fast {
+        border-bottom: 0.5rem solid #d998424d;
+    }
+</style>
 <BaseLayout>
     <div class="font-body text-xl">
         <div class="grid md:grid-cols-2 auto-rows-screen-1/2">
@@ -16,7 +35,11 @@ import LeadInText from "../components/copy/lead-in-text.astro";
             </div>
             <div class="text-black center-mid">
                 <div class="font-title max-w-md uppercase leading-relaxed">
-                    <p class="mb-0">Websites should be <a href="/build#effective" class="border-b border-current">effective</a>, <a href="/build#impactful" class="border-b border-current">impactful</a>, <a href="/build#efficient" class="border-b border-current">efficient</a>, and <a href="/build#fast" class="border-b border-current"><span class="inline-block">fast <span class="bg-white rounded-sm text-yellow-400">&#128498;</span></span></a></p>
+                    <p class="mb-0">Websites should be 
+                        <a href="/build#effective" ><span class="effective">effective</span></a>,
+                        <a href="/build#impactful"><span class="impactful">impactful</span></a>,
+                        <a href="/build#efficient"><span class="efficient">efficient</span></a>, and
+                        <a href="/build#fast"><span class="fast inline-block">fast &#128498;</span></a></p>
                     <p><strong>Expect nothing less</strong> from your website.</p>
                 </div>
             </div>
