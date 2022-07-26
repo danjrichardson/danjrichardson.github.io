@@ -11,6 +11,9 @@ const init = () => {
     const highlightLeft = x + parseFloat(cs.paddingLeft);
     const highlightWidth = width - (parseFloat(cs.paddingLeft) + parseFloat(cs.paddingRight));
 
+    menuHighlight.classList.remove('opacity-0');
+    menuContents.classList.remove('pointer-events-none', 'opacity-0');
+
     gsap.set(menuHighlight, {
         top: -1
     });
