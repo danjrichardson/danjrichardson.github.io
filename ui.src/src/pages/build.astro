@@ -1,6 +1,8 @@
 ---
 import BaseLayout from '../layouts/Base.astro'
 import ArrowRight from '../images/arrow-right.svg?raw';
+import LongCopy from '../components/copy/long-copy.astro';
+import LeadInText from "../components/copy/lead-in-text.astro";
 ---
 <BaseLayout>
     <div class="font-body text-xl">
@@ -11,7 +13,61 @@ import ArrowRight from '../images/arrow-right.svg?raw';
                 <div class="fill-orange-500 rotate-90" set:html={ArrowRight}></div>
             </button>
         </section>
-        <section class="grid md:grid-cols-2 md:auto-rows-screen-1/2">        
+
+        <section>
+            <LongCopy title="Building effective and impactful websites">
+                <Fragment slot="lead-in">
+                    <LeadInText tag="h3">
+                        Effective websites.
+                    </LeadInText>
+                </Fragment>
+                <Fragment slot="copy">
+                    <p>Anything new should be built to address the original goals, if it doesn't then the website is simply not going to be effective.</p>
+                    <p>We'll work together to understand what those goals are to make sure that your website will be effective.</p>
+                </Fragment>
+            </LongCopy>
+
+            <LongCopy reverse={false}>
+                <Fragment slot="lead-in">
+                    <LeadInText tag="h3">
+                        Impactful websites.
+                    </LeadInText>
+                </Fragment>
+                <Fragment slot="copy">
+                    <p>A site that is effective by being fast and efficient, will be impactful. The design of the website (and it's content) is symptahetic and relates to your users, plays a key role in a website leaving a positive impression.</p>
+                </Fragment>
+            </LongCopy>
+        </section>
+
+        <section>
+            <LongCopy title="Building efficient and fast websites">
+                <Fragment slot="lead-in">
+                    <LeadInText tag="h3">
+                        Efficient websites.
+                    </LeadInText>
+                </Fragment>
+                <Fragment slot="copy">
+                    <p>Tied closely to websites being fast, efficient websites really drive a users overall impression of a website. It's common knowledge that webpage speed greatly affects bounce rates, ecommerce conversion rates, and user experience, and the way websites are built are one of the main factors that affect page speed.</p>
+                    <p>Poorly built websites that have no been carefully made, serving unnecessary/bloated resources and incorrect image sizes, and various other factors all play a major role in a website being efficient.</p>
+                    <p><a href="/go-green" class="border-b border-current">Green websites</a> hold the trump card for efficient websites and will often wipe the floor with sites that are not built with efficiency in mind.</p>
+                </Fragment>
+            </LongCopy>
+
+            <LongCopy reverse={false}>
+                <Fragment slot="lead-in">
+                    <LeadInText tag="h3">
+                        Fast websites.
+                    </LeadInText>
+                </Fragment>
+                <Fragment slot="copy">
+                    <p>Pre-generated (or static) websites will always be quicker than a website that generates the page everytime it is requested.</p>
+                    <p>This doesn't mean that they are any less of a website though, and they are generally the best way to create a marketing/content/business website.</p>
+                    <p>These websites can be made in a variety of ways, with or without a content management system (CMS), and can be made available to users all around the world so it's really fast for everyone.</p>
+                </Fragment>
+            </LongCopy>
+        </section>
+
+        <!-- <section class="grid md:grid-cols-2 md:auto-rows-screen-1/2">        
             <div class="bg-black/5 center-mid py-14 md:py-0">
                 <h2 class="text-5xl gradient-heading" id="effective">Effective</h2>
             </div>
@@ -59,6 +115,8 @@ import ArrowRight from '../images/arrow-right.svg?raw';
                 </div>
             </div>   
         </section>
+
+         -->
     
     </div>     
 </BaseLayout>
