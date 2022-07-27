@@ -30,14 +30,16 @@ const isDevMod = import.meta.env.DEV;
 	<script>
 		document.addEventListener('DOMContentLoaded', function(){
 			const bg = document.querySelector('#bg');
-			window.addEventListener('mousemove', ({ clientX, clientY }) => {
+			const moveHiglight = ({ clientX, clientY }) => {
 				const { x, y, width, height } = bg.getBoundingClientRect();
 				const dx = clientX - (x + 0.5 * width);
 				const dy = clientY - (y + 0.5 * height);
 				const angle = Math.atan2(dy, dx) * 180 / Math.PI;
 				
 				bg.style.setProperty('--startDeg', `${angle + 90}deg`);
-				
+			};
+			window.addEventListener('mousemove', ({ clientX, clientY }) => {
+				moveHiglight({ clientX, clientY })			
 			}, false)
 		})
 	</script>
