@@ -11,7 +11,10 @@ const yearsSince = new Date().getFullYear() - yearStart;
 <BaseLayout>
 	
     <section>
-        <LongCopy title="About me, what I do, and how I achieve it">
+        <LongCopy title={true}>
+            <Fragment slot="title">
+                About me, what I do, <span class="sm:whitespace-nowrap">and how I achieve it</span>
+            </Fragment>
             <Fragment slot="lead-in">
                 <LeadInText tag="h2">
                     Who I am
