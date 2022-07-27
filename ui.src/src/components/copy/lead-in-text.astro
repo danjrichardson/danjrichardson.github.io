@@ -4,7 +4,7 @@ export interface Props {
     size?: string
     class?: string
 }
-const { class: className = "", tag = 'h2', size = 'text-3xl', ...rest } = Astro.props as Props;
+const { class: className = "", tag = 'h2', size = 'text-2xl md:text-3xl', ...rest } = Astro.props as Props;
 const classNames = ['font-lead-in uppercase leading-none', size, tag == 'span' ? 'inline-block' : '', className].filter(v => v);
 const HeadingOpen = `<${tag} class="${classNames.join(' ')}">`;
 const HeadingClose = `</${tag}>`;
