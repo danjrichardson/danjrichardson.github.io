@@ -11,14 +11,14 @@ const yearsSince = new Date().getFullYear() - yearStart;
 <BaseLayout>
 	
     <section>
-        <LongCopy title="About me, what I do, and I achieve it">
+        <LongCopy title="About me, what I do, and how I achieve it">
             <Fragment slot="lead-in">
                 <LeadInText tag="h2">
                     Who I am
                 </LeadInText>
             </Fragment>
             <Fragment slot="copy">
-                <p class="leading-9">I am a <strong>freelance web developer</strong> based in Derbyshire, UK, with over <strong>{yearsSince} years</strong> experience in web development and making websites.</p>
+                <p>I am a <strong>freelance web developer</strong> based in Derbyshire, UK, with over <strong class="whitespace-nowrap">{yearsSince} years</strong> experience in web development and making websites.</p>
             </Fragment>
         </LongCopy>
         <LongCopy>
