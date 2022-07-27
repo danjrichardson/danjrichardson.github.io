@@ -3,6 +3,7 @@ import MainNav from '../components/nav/main.astro';
 import '../css/global.pcss';
 
 const { title = "" } = Astro.props;
+const isDevMod = import.meta.env.DEV;
 
 ---
 <html lang="en">
@@ -41,7 +42,7 @@ const { title = "" } = Astro.props;
 		})
 	</script>
     
-    <!-- <script type="text/javascript">
+	{!isDevMod && <script type="text/javascript">
 
 	  var _gaq = _gaq || [];
 	  _gaq.push(['_setAccount', 'UA-859633-1']);
@@ -53,7 +54,7 @@ const { title = "" } = Astro.props;
 	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 	  })();
 
-	</script> -->
+	</script>}
 </body>
 
 </html>
