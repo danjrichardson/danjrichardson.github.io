@@ -16,118 +16,163 @@ import LeadInText from "../components/copy/lead-in-text.astro";
     });
 </script>
 <BaseLayout>
-    <div class="font-body text-xl">
-        <section class="relative h-screen flex flex-col justify-center text-center text-2xl">
-            <h1 class="self-center mb-4 text-4xl lg:text-6xl gradient-heading tracking-tighter">Effective, impactful,<span class="lg:block"></span> efficient, fast.</h1>
-            <p class="px-4">Your <span class="relative inline-block after:absolute after:left-0 after:bottom-1 after:-rotate-3 after:inline-block after:w-full after:h-px after:bg-current">new</span> website should deliver on all these critical points.</p>
-            <button class="w-5 mx-auto motion-safe:animate-bounce mt-20" id="scrollToContent">
-                <div class="fill-orange-500 rotate-90" set:html={ArrowRight}></div>
-            </button>
-        </section>
+    <section class="relative h-screen flex flex-col justify-center text-center text-2xl">
+        <h1 class="self-center mb-4 text-4xl lg:text-6xl gradient-heading tracking-tighter">Effective, impactful,<span class="lg:block"></span> efficient, fast.</h1>
+        <p class="px-4">Your <span class="relative inline-block after:absolute after:left-0 after:bottom-1 after:-rotate-3 after:inline-block after:w-full after:h-px after:bg-current">new</span> website should deliver on all these critical points.</p>
+        <button class="w-5 mx-auto motion-safe:animate-bounce mt-20" id="scrollToContent">
+            <div class="fill-orange-500 rotate-90" set:html={ArrowRight}></div>
+        </button>
+    </section>
 
-        <section>
-            <LongCopy title="Building effective and impactful websites">
-                <Fragment slot="lead-in">
-                    <LeadInText tag="h3">
-                        Effective websites.
-                    </LeadInText>
-                </Fragment>
-                <Fragment slot="copy">
-                    <p>Anything new should be built to address the original goals, if it doesn't then the website is simply not going to be effective.</p>
-                    <p>We'll work together to understand what those goals are to make sure that your website will be effective.</p>
-                </Fragment>
-            </LongCopy>
+    <section>
+        <LongCopy title={true}>
+            <Fragment slot="title">Building effective and <span class="sm:whitespace-nowrap">impactful websites</span></Fragment>
+            <Fragment slot="lead-in">
+                <LeadInText tag="h3">
+                    Effective websites.
+                </LeadInText>
+            </Fragment>
+            <Fragment slot="copy">
+                <p>Anything new should be built to address the original goals, if it doesn't then the website is simply not going to be effective.</p>
+                <LeadInText tag="span" size="text-2xl" class="gradient-heading">
+                    What is effective?
+                </LeadInText>
+                <p>The answer to “What is effective” can vary from client to client, and even within a single project. It could be a higher ecommerce conversion rate, or converting quality leads from the site into offline business.</p>
+                <p>We'll work together to understand what those goals are to make sure that your website has the best chance possible.</p>
+            </Fragment>
+        </LongCopy>
 
-            <LongCopy reverse={false}>
-                <Fragment slot="lead-in">
-                    <LeadInText tag="h3">
-                        Impactful websites.
-                    </LeadInText>
-                </Fragment>
-                <Fragment slot="copy">
-                    <p>A site that is effective by being fast and efficient, will be impactful. The design of the website (and it's content) is symptahetic and relates to your users, plays a key role in a website leaving a positive impression.</p>
-                </Fragment>
-            </LongCopy>
-        </section>
+        <LongCopy reverse={true}>
+            <Fragment slot="lead-in">
+                <LeadInText tag="h3">
+                    Impactful websites.
+                </LeadInText>
+            </Fragment>
+            <Fragment slot="copy">
+                <p>A site that is effective by being fast and efficient, will be impactful. The design of the website (and its content) should be sympathetic and relate to your users, this plays a key role in a website leaving a positive impression.</p>
+                <LeadInText tag="span" size="text-2xl" class="gradient-heading">
+                    How is it impactful?
+                </LeadInText>
+                <p>Having a mental note in a user's head after they leave your site can help your users remember you, with a higher chance of return visits and realising the website’s goals.</p>
+            </Fragment>
+        </LongCopy>
+    </section>
 
-        <section>
-            <LongCopy title="Building efficient and fast websites">
-                <Fragment slot="lead-in">
-                    <LeadInText tag="h3">
-                        Efficient websites.
-                    </LeadInText>
-                </Fragment>
-                <Fragment slot="copy">
-                    <p>Tied closely to websites being fast, efficient websites really drive a users overall impression of a website. It's common knowledge that webpage speed greatly affects bounce rates, ecommerce conversion rates, and user experience, and the way websites are built are one of the main factors that affect page speed.</p>
-                    <p>Poorly built websites that have no been carefully made, serving unnecessary/bloated resources and incorrect image sizes, and various other factors all play a major role in a website being efficient.</p>
-                    <p><a href="/go-green" class="border-b border-current">Green websites</a> hold the trump card for efficient websites and will often wipe the floor with sites that are not built with efficiency in mind.</p>
-                </Fragment>
-            </LongCopy>
+    <section>
+        <LongCopy title={true}>
+            <Fragment slot="title">
+                Building efficient and <span class="sm:whitespace-nowrap">fast websites</span>
+            </Fragment>
+            <Fragment slot="lead-in">
+                <LeadInText tag="h3">
+                    Efficient websites.
+                </LeadInText>
+            </Fragment>
+            <Fragment slot="copy">
+                <p>Tied closely to websites being fast, efficient websites really drive a users overall impression of a website. It's well documented that web page speed greatly affects bounce rates, ecommerce conversion rates, and user experience.</p>
+                <LeadInText tag="span" size="text-2xl" class="gradient-heading">
+                    What drives efficiency?
+                </LeadInText>
+                <p>The way a website is built is one of the biggest factors that affect overall page speed.</p>
+                <p>Poorly built websites that have not been carefully considered, serve unnecessary/bloated resources, incorrect image sizes, and various other factors all play a major role in a website being efficient.</p>
+                <p><a href="/go-green" class="border-b border-current">Sustainable websites</a> hold the trump card for efficiency and will often wipe the floor with sites that are not built with efficiency in mind, without having to have hosting that cost £000s per month.</p>
+            </Fragment>
+        </LongCopy>
 
-            <LongCopy reverse={false}>
-                <Fragment slot="lead-in">
-                    <LeadInText tag="h3">
-                        Fast websites.
-                    </LeadInText>
-                </Fragment>
-                <Fragment slot="copy">
-                    <p>Pre-generated (or static) websites will always be quicker than a website that generates the page everytime it is requested.</p>
-                    <p>This doesn't mean that they are any less of a website though, and they are generally the best way to create a marketing/content/business website.</p>
-                    <p>These websites can be made in a variety of ways, with or without a content management system (CMS), and can be made available to users all around the world so it's really fast for everyone.</p>
-                </Fragment>
-            </LongCopy>
-        </section>
+        <LongCopy reverse={true}>
+            <Fragment slot="lead-in">
+                <LeadInText tag="h3">
+                    Fast websites.
+                </LeadInText>
+            </Fragment>
+            <Fragment slot="copy">
+                <p>Pre-generated (or static) websites will most often be quicker than a website that generates the page every time it is requested.</p>
+                <LeadInText tag="span" size="text-2xl" class="gradient-heading">
+                    Does fast mean feature-less?
+                </LeadInText>
+                <p>Static websites don't mean that they are any less of a website though, and they are generally the best way to create a marketing/content/business website - they are even now more than capable as ecommerce websites.</p>
+                <p>These websites can be made in a variety of ways, with or without a content management system (CMS), and can be made available to users all around the world so it's really fast for everyone</p>
+            </Fragment>
+        </LongCopy>
+    </section>
 
-        <!-- <section class="grid md:grid-cols-2 md:auto-rows-screen-1/2">        
-            <div class="bg-black/5 center-mid py-14 md:py-0">
-                <h2 class="text-5xl gradient-heading" id="effective">Effective</h2>
+    <section>
+        <LongCopy title={true}>
+            <Fragment slot="title">
+                Cost
+            </Fragment>
+            <Fragment slot="lead-in">
+                <LeadInText tag="h3">
+                    So if my site is going to be effective, impactful, efficient, and fast&hellip; does that mean it's got a price tag to match?
+                </LeadInText>
+            </Fragment>
+            <Fragment slot="copy">
+                <p>Like a lot of things in life, you need to understand the value in something to be able to justify the cost.<br />
+                A simple 1 page landing page website with simple company contact information might only cost £300-500 but other than being useful, it doesn’t really offer anything more to the user.</p>
+
+                <p>Increasing the number of pages to your site will help you create new marketing landing pages to really engage the user and entice them to get in touch - letting your website be a great sales tool.</p>
+
+                <p>Get in touch to find out more about pricing but as very rough guide, this <i>could</i> look like:</p>
+
+                <ul class="italic text-base">
+                    <li>Single page sites starting from £300</li>
+                    <li>Smaller marketing sites start from £4000-£6000</li>
+                    <li>Larger informational sites starting from £6000-£8000</li>
+                    <li>Ecommerce sites starting from £5000-£7000</li>
+                </ul>
+
+            </Fragment>
+        </LongCopy>
+    </section>
+
+    <!-- <section class="grid md:grid-cols-2 md:auto-rows-screen-1/2">        
+        <div class="bg-black/5 center-mid py-14 md:py-0">
+            <h2 class="text-5xl gradient-heading" id="effective">Effective</h2>
+        </div>
+        <div class="text-black center-mid py-14 md:py-0">
+            <div class="max-w-md space-y-6">
+                <p class="font-bold">Anything new should be built to address the original goals, if it doesn't then the website is simply not going to be effective.</p>
+                <p>We'll work together to understand what those goals are to make sure that your website will be effective.</p>
             </div>
-            <div class="text-black center-mid py-14 md:py-0">
-                <div class="max-w-md space-y-6">
-                    <p class="font-bold">Anything new should be built to address the original goals, if it doesn't then the website is simply not going to be effective.</p>
-                    <p>We'll work together to understand what those goals are to make sure that your website will be effective.</p>
-                </div>
-            </div>
-        </section>
-    
-        <section class="grid md:grid-cols-2 md:auto-rows-screen-1/2">         
-            <div class="bg-black/5 center-mid md:order-2 py-14 md:py-0">
-                <h2 class="text-5xl gradient-heading" id="impactful">Impactful</h2>
-            </div>
-            <div class="text-black center-mid md:order-1 py-14 md:py-0">
-                <div class="max-w-md space-y-6">
-                    <p>A site that is effective by being fast and efficient, will be impactful. The design of the website (and it's content) is symptahetic and relates to your users, plays a key role in a website leaving a positive impression.</p>
-                </div>
-            </div>   
-        </section>
+        </div>
+    </section>
 
-        <section class="grid md:grid-cols-2">
-            <div class="bg-black/5 center-mid py-14 md:py-0">
-                <h2 class="text-5xl gradient-heading" id="efficient">Efficient</h2>
+    <section class="grid md:grid-cols-2 md:auto-rows-screen-1/2">         
+        <div class="bg-black/5 center-mid md:order-2 py-14 md:py-0">
+            <h2 class="text-5xl gradient-heading" id="impactful">Impactful</h2>
+        </div>
+        <div class="text-black center-mid md:order-1 py-14 md:py-0">
+            <div class="max-w-md space-y-6">
+                <p>A site that is effective by being fast and efficient, will be impactful. The design of the website (and it's content) is symptahetic and relates to your users, plays a key role in a website leaving a positive impression.</p>
             </div>
-            <div class="text-black center-mid py-14 lg:py-28">
-                <div class="max-w-md space-y-6">
-                    <p>Tied closely to websites being fast, efficient websites really drive a users overall impression of a website. It's common knowledge that webpage speed greatly affects bounce rates, ecommerce conversion rates, and user experience, and the way websites are built are one of the main factors that affect page speed.</p>
-                    <p>Poorly built websites that have no been carefully made, serving unnecessary/bloated resources and incorrect image sizes, and various other factors all play a major role in a website being efficient.</p>
-                    <p><a href="/go-green" class="border-b border-current">Green websites</a> hold the trump card for efficient websites and will often wipe the floor with sites that are not built with efficiency in mind.</p>
-                </div>
-            </div>
-        </section>
-    
-        <section class="grid md:grid-cols-2">         
-            <div class="bg-black/5 center-mid md:order-2 py-14 md:py-0">
-                <h2 class="text-5xl gradient-heading" id="fast">Fast</h2>
-            </div>
-            <div class="text-black center-mid md:order-1 py-14 lg:py-28">
-                <div class="max-w-md space-y-6">
-                    <p>Pre-generated (or static) websites will always be quicker than a website that generates the page everytime it is requested.</p>
-                    <p>This doesn't mean that they are any less of a website though, and they are generally the best way to create a marketing/content/business website.</p>
-                    <p>These websites can be made in a variety of ways, with or without a content management system (CMS), and can be made available to users all around the world so it's really fast for everyone.</p>
-                </div>
-            </div>   
-        </section>
+        </div>   
+    </section>
 
-         -->
-    
-    </div>     
+    <section class="grid md:grid-cols-2">
+        <div class="bg-black/5 center-mid py-14 md:py-0">
+            <h2 class="text-5xl gradient-heading" id="efficient">Efficient</h2>
+        </div>
+        <div class="text-black center-mid py-14 lg:py-28">
+            <div class="max-w-md space-y-6">
+                <p>Tied closely to websites being fast, efficient websites really drive a users overall impression of a website. It's common knowledge that webpage speed greatly affects bounce rates, ecommerce conversion rates, and user experience, and the way websites are built are one of the main factors that affect page speed.</p>
+                <p>Poorly built websites that have no been carefully made, serving unnecessary/bloated resources and incorrect image sizes, and various other factors all play a major role in a website being efficient.</p>
+                <p><a href="/go-green" class="border-b border-current">Green websites</a> hold the trump card for efficient websites and will often wipe the floor with sites that are not built with efficiency in mind.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="grid md:grid-cols-2">         
+        <div class="bg-black/5 center-mid md:order-2 py-14 md:py-0">
+            <h2 class="text-5xl gradient-heading" id="fast">Fast</h2>
+        </div>
+        <div class="text-black center-mid md:order-1 py-14 lg:py-28">
+            <div class="max-w-md space-y-6">
+                <p>Pre-generated (or static) websites will always be quicker than a website that generates the page everytime it is requested.</p>
+                <p>This doesn't mean that they are any less of a website though, and they are generally the best way to create a marketing/content/business website.</p>
+                <p>These websites can be made in a variety of ways, with or without a content management system (CMS), and can be made available to users all around the world so it's really fast for everyone.</p>
+            </div>
+        </div>   
+    </section>
+
+        -->
 </BaseLayout>
