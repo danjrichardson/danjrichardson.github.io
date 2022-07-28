@@ -16,7 +16,7 @@ import LeadInText from "../components/copy/lead-in-text.astro";
             <p>The discussion of climate change can feel like one you can’t avoid on a daily basis. Running a business with an online presence means this is even closer to home than you think.
                 If you already know this then that’s a brilliant start, but understanding what you can do to minimise the effect your online presence has is the next logical step.
                 Having a plan in place to reduce your overall business sustainability goals should include how your digital products play their part.</p>                
-            <LeadInText tag="span" size="text-2xl" class="my-4">
+            <LeadInText tag="span" size="text-2xl" class="gradient-heading my-4">
                 Everything uses energy
             </LeadInText>
             <p>Everytime someone visits your website, or digital product, an amount of energy is required to do what you think are even very basic tasks, such as:</p>
@@ -32,7 +32,6 @@ import LeadInText from "../components/copy/lead-in-text.astro";
     </LongCopy>
 
     <LongCopy reverse={true}>
-        <!-- <Fragment slot="title">Sustainable websites</Fragment> -->
         <Fragment slot="lead-in">
             <LeadInText tag="h2">
                 What does a sustainable website look like? Is it just plain text and no images?
@@ -74,11 +73,11 @@ import LeadInText from "../components/copy/lead-in-text.astro";
         </Fragment>
         <Fragment slot="copy">            
             <p>Using some of the latest technologies in modern website development, sustainable projects might be delivered using and combination of the following:</p>
-            <ul class="list-disc ml-10 space-y-2">
-                <li><strong>(Optional) CMS:</strong> Craft CMS, Sanity</li>
-                <li><strong>Frameworks:</strong> Astro.build, Next.js</li>
-                <li><strong>Interaction:</strong> Alpine.js, GreenSock GSAP</li>
-                <li><strong>Hosting:</strong> Servd.host, Netlify, Vercel</li>
+            <ul class="space-y-2">
+                <li><h3 class="font-bold text-xl gradient-heading font-title">(Optional) CMS:</h3> Craft CMS, Sanity</li>
+                <li><h3 class="font-bold text-xl gradient-heading font-title">Frameworks:</h3> Astro.build, Next.js</li>
+                <li><h3 class="font-bold text-xl gradient-heading font-title">Interaction:</h3> Alpine.js, GreenSock GSAP</li>
+                <li><h3 class="font-bold text-xl gradient-heading font-title">Hosting:</h3> Servd.host, Netlify, Vercel</li>
             </ul>
         </Fragment>
     </LongCopy>
