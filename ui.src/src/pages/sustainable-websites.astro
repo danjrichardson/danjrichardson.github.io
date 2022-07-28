@@ -1,55 +1,90 @@
 ---
-import BaseLayout from '../layouts/Base.astro'
+import BaseLayout from '../layouts/Base.astro';
+import LongCopy from '../components/copy/long-copy.astro';
+import LeadInText from "../components/copy/lead-in-text.astro";
 ---
 <BaseLayout>
-    <div class="font-body text-xl">
-        <div class="grid md:grid-cols-2" style="grid-auto-rows: 50vh;">        
-            <div class="bg-[#3a9a00] text-white center-mid">
-                <div>
-                    <div class="font-title">
-                        <h1 class="text-5xl mb-10">Green websites?</h1>
-                    </div>
-                </div>
-            </div>
-            <div class="text-black center-mid">
-                <div class="max-w-md space-y-4">
-                    <p class="leading-9">Importance of green, how it helps you and your visitors</p>
-                </div>
-            </div>
-        </div>
-    
-        <div class="grid md:grid-cols-2" style="grid-auto-rows: 50vh;">         
-            <div class="bg-black text-white center-mid md:order-2">
-                <div>
-                    <div class="font-title">
-                        <h2 class="text-5xl">How it's done</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="text-black center-mid md:order-1">
-                <div class="max-w-md space-y-4">
-                    <p>How it's achieved, optimised, responsive imagery, green hosting, optimised resources (JS, css), not using full JS libraries if it's not needed - vanilla js</p>
-                </div>
-            </div>   
-        </div>
-    
-        <div class="grid md:grid-cols-2" style="grid-auto-rows: 50vh;">        
-            <div class="bg-black text-white center-mid">
-                <div>
-                    <h2 class="font-title text-5xl">Technologies to achieve it</h2>
-                </div>
-            </div>
-            <div class="text-black center-mid">
-                <div class="max-w-md space-y-4">
-                    <p>Using some of the latest technologies in modern website development, projects are delivered using:</p>
-                    <ul>
-                        <li><strong class="font-bold">(Optional) CMS:</strong> CraftCMS, DatoCMS/Prismic/Sanity</li>
-                        <li><strong class="font-bold">Frameworks:</strong> Astro.build</li>
-                        <li><strong class="font-bold">Hosting:</strong> Servd.host, Netlify</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    
-    </div>     
+
+    <LongCopy title={true} titleImportance="h1">
+        <Fragment slot="title">Sustainable websites</Fragment>
+        <Fragment slot="lead-in">
+            <LeadInText tag="h2">
+                Sustainable and climate conscious websites are becoming increasingly important and are going to be harder to ignore.
+            </LeadInText>
+        </Fragment>
+        <Fragment slot="copy">
+            <p>The discussion of climate change can feel like one you can’t avoid on a daily basis. Running a business with an online presence means this is even closer to home than you think.
+                If you already know this then that’s a brilliant start, but understanding what you can do to minimise the effect your online presence has is the next logical step.
+                Having a plan in place to reduce your overall business sustainability goals should include how your digital products play their part.</p>                
+            <LeadInText tag="span" size="text-2xl" class="my-4">
+                Everything uses energy
+            </LeadInText>
+            <p>Everytime someone visits your website, or digital product, an amount of energy is required to do what you think are even very basic tasks, such as:</p>
+            <ul class="list-disc ml-10 space-y-2">
+                <li>Create the text on the screen shown to your user</li>
+                <li>Apply your branding to the page and the overall page look and feel</li>
+                <li>The images shown on the page that are trying to tell a story</li>
+                <li>The way the initial web page is created</li>
+            </ul>
+            <p>There are a lot of factors in play that can increase the amount of energy that your website consumes, but ensuring that best practices in modern web development are part of your website will form a good starting point.</p>
+            <p><a href="/services/#performance" class="underline">Find out more with a performance audit.</a></p>
+        </Fragment>
+    </LongCopy>
+
+    <LongCopy reverse={true}>
+        <!-- <Fragment slot="title">Sustainable websites</Fragment> -->
+        <Fragment slot="lead-in">
+            <LeadInText tag="h2">
+                What does a sustainable website look like? Is it just plain text and no images?
+            </LeadInText>
+        </Fragment>
+        <Fragment slot="copy">
+            <p>The great thing about web development is that it’s continually evolving for the good, and the bad.</p>
+            <p>We’re able to do so much on the web these days that we couldn’t even dream about 5-10 years ago, but with that comes the risk of very easily losing track of the impact it brings, mainly requiring more energy. So we have to really weigh up various factors when implementing something new, such as:</p>
+            <ul class="list-disc ml-10 space-y-2 !mb-10">
+                <li>Does it offer a great user experience</li>
+                <li>Can a better or similar user experience be created without it</li>
+                <li>Is there a more energy efficient way of doing it</li>
+            </ul>
+        </Fragment>
+    </LongCopy>
+
+    <LongCopy title={true} reverse={true}>
+        <Fragment slot="title">Concentrating on how sustainability is achieved.</Fragment>
+        <Fragment slot="copy">            
+            <p>Being conscious of the impacts a feature may bring doesn’t mean amazing things can’t be done, we just have to be more conscious of <i>what</i> or <i>how</i> something is done.<br />
+                In order to address some of these concerns, some common elements may happen:</p>
+            <ul class="list-disc ml-10 space-y-2">
+                <li>Optimising all static resources - images, website styling, javascript, branding, icons, 3rd party functionality (like user tracking scripts)</li>
+                <li>Responsive images</li>
+                <li>Loading parts of the website only when they are needed - known as lazy/deferred loading</li>
+                <li>Caching re-usable elements of the website for all users where possible</li>
+                <li>Using green hosting that runs off renewable energy, or not using overpowered hosting that is under utilised.</li>
+            </ul>
+            <p>This is just the start of it, and every project will have its own goals and requirements, with different ways to achieve these goals.</p>
+            <p><a href="/contact" class="underline">Get in touch to understand more</a></p>
+        </Fragment>
+    </LongCopy>
+
+    <LongCopy reverse={true}>
+        <Fragment slot="lead-in">
+            <LeadInText tag="h2">
+                The technologies to achieve sustainability are continually evolving, let's look at these.
+            </LeadInText>
+        </Fragment>
+        <Fragment slot="copy">            
+            <p>Using some of the latest technologies in modern website development, sustainable projects might be delivered using and combination of the following:</p>
+            <ul class="list-disc ml-10 space-y-2">
+                <li><strong>(Optional) CMS:</strong> Craft CMS, Sanity</li>
+                <li><strong>Frameworks:</strong> Astro.build, Next.js</li>
+                <li><strong>Interaction:</strong> Alpine.js, GreenSock GSAP</li>
+                <li><strong>Hosting:</strong> Servd.host, Netlify, Vercel</li>
+            </ul>
+        </Fragment>
+    </LongCopy>
+
+    <div class="p-8 text-center">
+        <h2>Ready to build a new sustainable website?</h2>
+        <p>Great, feel free to <a href="/contact" class="underline">contact me</a> to discuss it further.</p>
+    </div>
 </BaseLayout>
