@@ -1,6 +1,11 @@
 ---
 import HomeIcon from '../../images/home.svg?raw';
-const pages = [
+import NavItem from './NavItem.astro';
+interface PageItem {
+    url: string,
+    text: string
+}
+const pages:Array<PageItem> = [
     { url: '/about', text: 'About' },
     { url: '/build', text: 'Build' },
     { url: '/#services', text: 'Services' },
@@ -29,8 +34,10 @@ const pages = [
 <div id="menuHighlight" class="fixed top-16 right-0 w-full h-px bg-black z-40 opacity-0 pointer-events-none"></div>
 <nav id="menuContents" class="fixed inset-0 bg-white z-30 pointer-events-none opacity-0">
     <ul class="w-full h-full flex flex-col items-center justify-center text-4xl md:text-8xl uppercase font-bold space-y-4">
-        {pages.map(page => <li>
-            <a href={page.url} class="block gradient-heading after:block after:h-px sm:after:h-1 after:rounded-full after:w-full after:bg-[#7c13ff] after:scale-x-0 after:transition-transform hover:after:scale-x-100">{page.text}</a>
-        </li>)}
+        {
+            pages.map(({ url, text }) => (<li>
+                    <a href={url} class="block gradient-heading after:block after:h-px sm:after:h-1 after:rounded-full after:w-full after:bg-[#7c13ff] after:scale-x-0 after:transition-transform hover:after:scale-x-100">{text}</a>
+            </li>))
+        }
     </ul>
 </nav>
