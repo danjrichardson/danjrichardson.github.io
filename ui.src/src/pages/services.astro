@@ -1,0 +1,76 @@
+---
+import BaseLayout from '../layouts/Base.astro';
+import LongCopy from '../components/copy/long-copy.astro';
+import LeadInText from "../components/copy/lead-in-text.astro";
+---
+<BaseLayout>
+    <LongCopy title={true} titleImportance="h1">
+        <Fragment slot="title">Services</Fragment>
+        <Fragment slot="lead-in">
+            <LeadInText tag="h2">
+                Web development
+            </LeadInText>
+        </Fragment>
+        <Fragment slot="copy">
+            <p>At the core of what I do, web development is the main service that I offer with other services revolving around this.</p>
+            <p>The areas covered in web development are vast and fall under this term. If you have a requirement then it’s best getting in touch and discussing it to better understand what you need.</p>
+            <p>Some web development tasks that I can help with are:</p>
+
+            <h3 class="font-bold text-xl gradient-heading font-title">Marketing websites:</h3>
+            <ul class="list-disc ml-8 space-y-2 !mb-8">
+                <li>Start-up business websites</li>
+                <li><span class="cursor-help" title="Small and medium-sized enterprises">SME</span> website</li>
+                <li><span class="cursor-help" title="Fast-moving consumer goods">FMCG</span> websites</li>
+                <li>Simple single page website</li>
+                <li>Small-medium multi-page websites</li>
+                <li>Large many-page marketing websites</li>
+            </ul>
+
+            <h3 class="font-bold text-xl gradient-heading font-title">Ecommerce  websites:</h3>
+            <ul class="list-disc ml-8 space-y-2 !mb-8">
+                <li>Small-medium sized ecommerce websites</li>
+                <li>Large ecommerce sites - <a href="/contact" class="underline">contact me</a></li>
+            </ul>
+
+            <h3 class="font-bold text-xl gradient-heading font-title">Programming/custom developments:</h3>
+            <ul class="list-disc ml-8 space-y-2">                
+                <li>Custom code development for a CRM integration, email marketing, ecommerce product interactions.</li>
+                <li>In-page or full-page animation, page transitions</li>
+                <li>Highly interactive pages, such as quote builders, product ordering/customisation, information exploration</li>
+            </ul>
+
+            <p><a href="/contact" class="underline">Talk to me about a new project</a></p>
+        </Fragment>
+    </LongCopy>
+    <LongCopy reverse={true}>
+        <Fragment slot="lead-in">
+            <LeadInText tag="h2">
+                Performance Audit
+            </LeadInText>
+        </Fragment>
+        <Fragment slot="copy">
+            <p>Ensuring your site is working well is extremely important. In the same way you’d service and MOT a car, looking at how the site is operating, its speed, and what it’s using in order to display what on screen, are the types of information that needs to be kept on top to ensure everything is in good working order.</p>
+            <p>It’s extremely easy to add more and more to a website that ultimately then gets underused, or not used at all, causing a website to slow down.</p>
+            <p>Ensuring the site is also built correctly and optimally is also critical to a site working well and delivering on its goals.</p>
+
+            <LeadInText tag="h3" size="!text-2xl gradient-heading">
+                What's in an audit?
+            </LeadInText>
+            <p>Undertaking a performance audit may include:</p>
+            <ul class="list-disc ml-10 space-y-2">
+                <li>Running Google Lighthouse audit as a baseline and picking any low-hanging fruit to make quick-win improvements</li>
+                <li>Analysing the website styling (CSS) and interactive parts (Javascript) for its usage and looking for opportunities to remove old/unused parts</li>
+                <li>Checking appropriately size images are delivered to different screen sizes/devices</li>
+                <li>Analysing how static assets, such as images, CSS, JavaScript is delivered</li>
+                <li>Checking server capabilities for modern technologies, such as delivering next-gen image formats, caching headers for static assets, such as images, CSS, Javascript.</li>
+            </ul>
+
+            <a href="/contact" class="underline">Arrange a performance audit</a>
+        </Fragment>
+    </LongCopy>
+
+    <div class="p-8 text-center">
+        <h2>Ready to build a new sustainable website?</h2>
+        <p>Great, feel free to <a href="/contact" class="underline">contact me</a> to discuss it further.</p>
+    </div>
+</BaseLayout>
