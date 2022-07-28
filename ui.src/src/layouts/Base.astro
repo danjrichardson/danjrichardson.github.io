@@ -30,7 +30,7 @@ const isDevMod = import.meta.env.DEV;
 	<script>
 		document.addEventListener('DOMContentLoaded', function(){
 			if (window.matchMedia("(prefers-reduced-motion: no-preference)").matches){
-				const bg = document.querySelector('#bg');
+				const bg:HTMLDivElement = document.querySelector('#bg');
 				const moveHiglight = ({ clientX, clientY }) => {
 					const { x, y, width, height } = bg.getBoundingClientRect();
 					const dx = clientX - (x + 0.5 * width);

@@ -7,12 +7,14 @@ import LeadInText from "../components/copy/lead-in-text.astro";
 <script>
     document.addEventListener('DOMContentLoaded', function(){
         const btn = document.getElementById('scrollToContent');
-        btn.addEventListener('click', () => {
-            window.scrollTo({
-                top: window.innerHeight,
-                behavior: "smooth"
+        if (btn){
+            btn.addEventListener('click', () => {
+                window.scrollTo({
+                    top: window.innerHeight,
+                    behavior: "smooth"
+                });
             });
-        });
+        }
     });
 </script>
 <BaseLayout>

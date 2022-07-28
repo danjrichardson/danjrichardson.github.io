@@ -10,4 +10,28 @@
             -webkit-background-clip: text;
         }
     }
+
+    .arrow-button:hover {
+        border-image: linear-gradient(to right, #e03da6,#7c13ff,#416199,#33758c) 1;
+    }
+    .arrow-button.group:hover .arrow-1 {
+        animation: arrow1-move .75s linear infinite forwards;
+    }
+    .arrow-button.group:hover .arrow-2 {
+        animation: arrow2-move .75s linear infinite forwards;
+    }
+    .arrow-1, .arrow-2 {
+        @apply transform transition-transform;
+    }
+    .arrow-2 {
+        @apply -translate-x-full;
+    }
+    @keyframes arrow1-move {
+        0% { transform: translateX(0%); }
+        100% { transform: translateX(200%); }
+    }
+    @keyframes arrow2-move {
+        0% { transform: translateX(-200%); }
+        100% { transform: translateX(0%); }
+    }
 }
