@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/Base.astro'
 import Button from 'components/button.astro';
+import IconBolt from '../images/bolt.svg?raw';
 ---
 <style>
     .effective {
@@ -60,7 +61,7 @@ import Button from 'components/button.astro';
                                 <a class="tick-item" href="/build#effective" ><span class="effective">effective</span></a>
                                 <a class="tick-item" href="/build#impactful"><span class="impactful">impactful</span></a>
                                 <a class="tick-item" href="/build#efficient"><span class="efficient">efficient</span></a>
-                                <a class="tick-item" href="/build#fast"><span class="fast inline-block">fast &#128498;</span></a>
+                                <a class="tick-item" href="/build#fast"><span class="fast inline-flex">fast <span class="w-10 fill-current" set:html={IconBolt}></span></span></a>
                                 <a class="tick-item" href="/build#effective" ><span class="effective">effective</span></a>
                             </span>
                         </span>

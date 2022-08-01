@@ -2,9 +2,11 @@
 import BaseLayout from '../layouts/Base.astro';
 import LongCopy from '../components/copy/long-copy.astro';
 import LeadInText from "../components/copy/lead-in-text.astro";
+//import IconSustainability from '../images/sustainability.svg?raw';
 ---
 <BaseLayout>
 
+    <!-- <div class="fixed w-full bottom-0 sm:top-0 right-[30%] opacity-[0.035]" set:html={IconSustainability}></div> -->
     <LongCopy title={true} titleImportance="h1">
         <Fragment slot="title">Sustainable websites</Fragment>
         <Fragment slot="lead-in">

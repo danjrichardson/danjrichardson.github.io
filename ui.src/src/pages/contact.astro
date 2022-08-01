@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/Base.astro';
 import Button from 'components/button.astro';
+import IconEmail from '../images/email.svg?raw';
 ---
 <style>
     .calendly-inline-widget {
@@ -23,7 +24,11 @@ import Button from 'components/button.astro';
                     <p>Alternatively, you can schedule a call with me on Calendly.</p>
 
                     <div class="!mt-10">
-                        <Button url="mailto:info@danrichardson.net">&#128386; <span class="ml-4">Email Me</span></Button>
+                        <Button url="mailto:info@danrichardson.net">
+                            <span class="inline-flex items-center self-center">
+                                <span class="w-5 fill-current" set:html={IconEmail}></span> <span class="ml-4">Email Me</span>
+                            </span>
+                        </Button>
                     </div>
                 </div>
             </div>
