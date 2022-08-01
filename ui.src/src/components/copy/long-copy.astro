@@ -17,6 +17,9 @@ const HeadingClose = `</${titleImportance}>`;
 
         const elements = document.querySelectorAll('.lead-in-text');
         elements.forEach(el => {
+            if (el.children.length == 0){
+                return;
+            }
             const titleTextEl = el.children[0] as HTMLElement;
             const textBlocks = titleTextEl.innerText.split(' ').filter(t => t);
             titleTextEl.innerHTML = '';
