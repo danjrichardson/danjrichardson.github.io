@@ -2,46 +2,16 @@
 import BaseLayout from '../layouts/Base.astro'
 import Button from 'components/button.astro';
 ---
-<BaseLayout>
-	
-    <div class="font-body text-xl">
-        <section class="relative min-h-screen flex flex-col justify-center text-center text-2xl">
-            <h1 class="self-center mb-10 text-4xl lg:text-6xl gradient-heading tracking-tighter">Recent works</h1>
-            <div class="px-4 max-w-3xl mx-auto space-y-6">
-                <p>This page is intentionally (at least for now) left blank, as the majority of my work that I do is for agencies - so it's not my work to show off!</p>
-                <p>I'm proud of the work I do though and I would be more than happy to personally show you what work I have done, just ask.</p>
-            </div>
+<BaseLayout>	
+    <section class="my-auto relative flex flex-col justify-center text-center">
+        <h1 class="self-center mb-10 text-4xl lg:text-6xl gradient-heading tracking-tighter">Recent works</h1>
+        <div class="px-4 max-w-xl mx-auto space-y-6">
+            <p>This page is intentionally (at least for now) left blank, as the majority of my work that I do is for agencies - so it's not my work to show off!</p>
+            <p>I'm proud of the work I do though and I would be more than happy to personally show you what work I have done, just ask.</p>
+        </div>
 
-            <div class="self-center !mt-10">
-                <Button url="/contact">Find out more</Button>
-            </div>
-        </section>
-        
-        <!-- <section class="grid md:grid-cols-2 auto-rows-screen-1/2">        
-            <div class="bg-black/5 center-mid">
-                <h2 class="text-5xl gradient-heading">Lumishore</h2>
-                During my time at Together Agency.
-            </div>
-            <div class="text-black center-mid">
-                <div class="max-w-md space-y-4">
-                    <p>New marketing website for Lumishore with a completely overhauled structure, after a thorough UX review.</p>
-                    <p>The site is built in CraftCMS with a couple of small additional custom modules, TailwindCSS for website styling, Alpinejs for page interactions, and GSAP for animation and motion interactions.</p>
-                </div>
-            </div>
-        </section>
-    
-        <section class="grid md:grid-cols-2 auto-rows-screen-1/2">        
-            <div class="bg-black/5 center-mid md:order-1">
-                <h2 class="text-5xl gradient-heading">Crosby Blinds</h2>
-                During my time at Skylight Media.
-            </div>
-            <div class="text-black center-mid">
-                <div class="max-w-md space-y-4">
-                    <p>A completely redesigned and restructured e-commerce website, which is the center of their online business.</p>
-                    <p>The new website was made to make administration of a very complicated product, much easier, and less laborious.</p>
-                    <p>This was a completely 100% bespoke project built in .net Core, Next.js/React for the CMS, and using a custom Opayo payment integration to facilitate e-commerce transactions.</p>
-                </div>
-            </div>
-        </section> -->
-    </div>   
+        <div class="self-center !mt-10">
+            <Button url="/contact">Find out more</Button>
+        </div>
+    </section>
 </BaseLayout>
