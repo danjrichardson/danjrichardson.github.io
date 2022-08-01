@@ -3,6 +3,7 @@ import MainNav from '../components/nav/main.astro';
 import '../css/global.pcss';
 
 const { title = "" } = Astro.props;
+const isHome = Astro.url.pathname == '/';
 const isDevMod = import.meta.env.DEV;
 
 ---
@@ -23,7 +24,7 @@ const isDevMod = import.meta.env.DEV;
 	<div id="bg" class={`bg fixed inset-0 opacity-40 z-0`}></div>
 	<MainNav client:load />
 
-	<div class="relative z-10">
+	<div class={`relative z-10 ${!isHome && 'mt-16'}`}>
     	<slot />
 	</div>
 
