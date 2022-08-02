@@ -5,6 +5,7 @@ import LeadInText from "../components/copy/lead-in-text.astro";
 import IconBolt from '../images/bolt.svg?raw';
 import IconSustainability from '../images/sustainability.svg?raw';
 import Button from 'components/button.astro';
+import Dan from '../images/dan.jpg';
 const yearStart = 2006;
 const yearsSince = new Date().getFullYear() - yearStart;
 // THINGS I CAN DO:<br />
@@ -22,6 +23,7 @@ const yearsSince = new Date().getFullYear() - yearStart;
                 <LeadInText tag="h2">
                     Who I am
                 </LeadInText>
+                <img src={Dan} alt="" class="rounded-full md:w-3/4 mx-auto my-10 md:-mb-8" />
             </Fragment>
             <Fragment slot="copy">
                 <p>I am a <strong>freelance web developer</strong> based in Derbyshire, UK, with over <strong class="whitespace-nowrap">{yearsSince} years</strong> experience in various aspects of web development. From back-end programming, to crafting amazing websites, I've been helping agencies across the East Midlands since {yearStart}.</p>

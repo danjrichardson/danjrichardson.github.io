@@ -5,8 +5,13 @@ import LeadInText from "../components/copy/lead-in-text.astro";
 import Button from 'components/button.astro';
 //import IconSustainability from '../images/sustainability.svg?raw';
 ---
-<BaseLayout>
 
+<!-- <style>
+    img.bob {
+        mask-image: url(#bob);
+    }
+</style> -->
+<BaseLayout>
     <!-- <div class="fixed w-full bottom-0 sm:top-0 right-[30%] opacity-[0.035]" set:html={IconSustainability}></div> -->
     <LongCopy title={true} titleImportance="h1">
         <Fragment slot="title">Sustainable websites</Fragment>
@@ -14,6 +19,22 @@ import Button from 'components/button.astro';
             <LeadInText tag="h2">
                 Sustainable and climate conscious websites are becoming increasingly important and are going to be harder to ignore.
             </LeadInText>
+
+            <div class="relative aspect-[350/285] my-10">
+                <svg class="absolute top-0 left-0 w-full" viewBox="0 0 690 565" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M674.5 293.5C716.5 444 672.462 565 506.5 565C340.538 565 0 414.498 0 264C0 113.502 113.538 0.499939 279.5 0.499939C445.462 0.499939 601 133 674.5 293.5Z" fill="url(#paint0_linear_5_3)"/>
+                    <defs>
+                    <linearGradient id="paint0_linear_5_3" x1="-0.591081" y1="322.265" x2="689.074" y2="314.012" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#E03DA6"/>
+                    <stop offset="0.322917" stop-color="#8015FC"/>
+                    <stop offset="0.671875" stop-color="#416199"/>
+                    <stop offset="1" stop-color="#33758C"/>
+                    </linearGradient>
+                    </defs>
+                </svg>                  
+                <img class="blob-mask absolute w-full h-full" src="https://images.unsplash.com/photo-1632103996718-4a47cf68b75e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=400&q=80" alt="" />
+            </div>
+
         </Fragment>
         <Fragment slot="copy">
             <p>The discussion of climate change can feel like one you can’t avoid on a daily basis. Running a business with an online presence means this is even closer to home than you think.
@@ -52,6 +73,21 @@ import Button from 'components/button.astro';
             <LeadInText tag="h3">
                 What does a sustainable website look like? Is it just plain text and no images?
             </LeadInText>
+
+            <div class="relative aspect-[350/285] my-10 -scale-x-100">
+                <svg class="absolute top-0 left-0 w-full" viewBox="0 0 690 565" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M674.5 293.5C716.5 444 672.462 565 506.5 565C340.538 565 0 414.498 0 264C0 113.502 113.538 0.499939 279.5 0.499939C445.462 0.499939 601 133 674.5 293.5Z" fill="url(#paint0_linear_5_3)"/>
+                    <defs>
+                    <linearGradient id="paint0_linear_5_3" x1="-0.591081" y1="322.265" x2="689.074" y2="314.012" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#E03DA6"/>
+                    <stop offset="0.322917" stop-color="#8015FC"/>
+                    <stop offset="0.671875" stop-color="#416199"/>
+                    <stop offset="1" stop-color="#33758C"/>
+                    </linearGradient>
+                    </defs>
+                </svg>                  
+                <img class="blob-mask absolute w-full h-full" src="https://images.unsplash.com/photo-1508349356983-7838c2b04eb2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=400&q=80" alt="" />
+            </div>
         </Fragment>
         <Fragment slot="copy">
             <p>Being conscious of the impacts a feature may bring doesn’t mean amazing things can’t be done, we just have to be more conscious of <i>what</i> or <i>how</i> something is done.<br />
