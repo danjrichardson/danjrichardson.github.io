@@ -1,0 +1,130 @@
+---
+import BaseLayout from '../layouts/Base.astro';
+import LongCopy from '../components/copy/long-copy.astro';
+import LeadInText from "../components/copy/lead-in-text.astro";
+import Button from 'components/button.astro';
+//import IconSustainability from '../images/sustainability.svg?raw';
+---
+
+<!-- <style>
+    img.bob {
+        mask-image: url(#bob);
+    }
+</style> -->
+<BaseLayout>
+    <!-- <div class="fixed w-full bottom-0 sm:top-0 right-[30%] opacity-[0.035]" set:html={IconSustainability}></div> -->
+    <LongCopy title={true} titleImportance="h1">
+        <Fragment slot="title">Sustainable websites</Fragment>
+        <Fragment slot="lead-in">
+            <LeadInText tag="h2">
+                Sustainable and climate conscious websites are becoming increasingly important and are going to be harder to ignore.
+            </LeadInText>
+
+            <div class="relative aspect-[350/285] my-10">
+                <svg class="absolute top-0 left-0 w-full" viewBox="0 0 690 565" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M674.5 293.5C716.5 444 672.462 565 506.5 565C340.538 565 0 414.498 0 264C0 113.502 113.538 0.499939 279.5 0.499939C445.462 0.499939 601 133 674.5 293.5Z" fill="url(#paint0_linear_5_3)"/>
+                    <defs>
+                    <linearGradient id="paint0_linear_5_3" x1="-0.591081" y1="322.265" x2="689.074" y2="314.012" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#E03DA6"/>
+                    <stop offset="0.322917" stop-color="#8015FC"/>
+                    <stop offset="0.671875" stop-color="#416199"/>
+                    <stop offset="1" stop-color="#33758C"/>
+                    </linearGradient>
+                    </defs>
+                </svg>                  
+                <img class="blob-mask absolute w-full h-full" src="https://images.unsplash.com/photo-1632103996718-4a47cf68b75e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=400&q=80" alt="" />
+            </div>
+
+        </Fragment>
+        <Fragment slot="copy">
+            <p>The discussion of climate change can feel like one you can’t avoid on a daily basis. Running a business with an online presence means this is even closer to home than you think.
+                If you already know this then that’s a brilliant start, but understanding what you can do to minimise the effect your online presence has is the next logical step.
+                Having a plan in place to reduce your overall business sustainability goals should include how your digital products play their part.</p>                
+            <LeadInText tag="span" size="text-2xl" class="gradient-heading my-4">
+                Everything uses energy
+            </LeadInText>
+            <p>Everytime someone visits your website, or digital product, an amount of energy is required to do what you think are even very basic tasks, such as:</p>
+            <ul class="list-disc ml-10 space-y-2">
+                <li>Create the text on the screen shown to your user</li>
+                <li>Apply your branding to the page and the overall page look and feel</li>
+                <li>The images shown on the page that are trying to tell a story</li>
+                <li>The way the initial web page is created</li>
+            </ul>
+            <p>There are a lot of factors in play that can increase the amount of energy that your website consumes, but ensuring that best practices in modern web development are part of your website will form a good starting point.</p>
+            <p class="!mt-8">
+                <Button url="/services/#performance" on={true}>Find out more with a performance audit.</Button>
+            </p>
+        </Fragment>
+    </LongCopy>
+
+    <div class="max-w-4xl mx-auto px-4 xl:px-0 space-y-4">
+        <p>The great thing about web development is that it’s continually evolving for the good, and the bad.</p>
+        <p>We’re able to do so much on the web these days that we couldn’t even dream about 5-10 years ago, but with that comes the risk of very easily losing track of the impact it brings, mainly requiring more energy. So we have to really weigh up various factors when implementing something new, asking questions such as:</p>
+        <ul class="list-disc ml-10 space-y-2 !mb-10">
+            <li>Does it offer a great user experience?</li>
+            <li>Can a better or similar user experience be created without it?</li>
+            <li>Is there a more energy efficient way of doing it?</li>
+        </ul>
+    </div>
+
+    <LongCopy title={true} reverse={true}>
+        <Fragment slot="title">Concentrating on how sustainability is achieved.</Fragment>
+        <Fragment slot="lead-in">
+            <LeadInText tag="h3">
+                What does a sustainable website look like? Is it just plain text and no images?
+            </LeadInText>
+
+            <div class="relative aspect-[350/285] my-10 -scale-x-100">
+                <svg class="absolute top-0 left-0 w-full" viewBox="0 0 690 565" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M674.5 293.5C716.5 444 672.462 565 506.5 565C340.538 565 0 414.498 0 264C0 113.502 113.538 0.499939 279.5 0.499939C445.462 0.499939 601 133 674.5 293.5Z" fill="url(#paint0_linear_5_3)"/>
+                    <defs>
+                    <linearGradient id="paint0_linear_5_3" x1="-0.591081" y1="322.265" x2="689.074" y2="314.012" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#E03DA6"/>
+                    <stop offset="0.322917" stop-color="#8015FC"/>
+                    <stop offset="0.671875" stop-color="#416199"/>
+                    <stop offset="1" stop-color="#33758C"/>
+                    </linearGradient>
+                    </defs>
+                </svg>                  
+                <img class="blob-mask absolute w-full h-full" src="https://images.unsplash.com/photo-1508349356983-7838c2b04eb2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=400&q=80" alt="" />
+            </div>
+        </Fragment>
+        <Fragment slot="copy">
+            <p>Being conscious of the impacts a feature may bring doesn’t mean amazing things can’t be done, we just have to be more conscious of <i>what</i> or <i>how</i> something is done.<br />
+                In order to address some of these concerns, some common elements may happen:</p>
+            <ul class="list-disc ml-10 space-y-2">
+                <li>Optimising all static resources - images, website styling, javascript, branding, icons, 3rd party functionality (like user tracking scripts)</li>
+                <li>Responsive images</li>
+                <li>Loading parts of the website only when they are needed - known as lazy/deferred loading</li>
+                <li>Caching re-usable elements of the website for all users where possible</li>
+                <li>Using green hosting that runs off renewable energy, or not using overpowered hosting that is under utilised.</li>
+            </ul>
+            <p>This is just the start of it, and every project will have its own goals and requirements, with different ways to achieve these goals.</p>
+            <p class="!mt-8">
+                <Button url="/contact" on={true}>Get in touch to understand more</Button>
+            </p>
+        </Fragment>
+    </LongCopy>
+
+    <LongCopy>
+        <Fragment slot="lead-in">
+            <LeadInText tag="h2">
+                The technologies to achieve sustainability are <span class="whitespace-nowrap">continually evolving.</span>
+            </LeadInText>
+        </Fragment>
+        <Fragment slot="copy">            
+            <p>Using some of the latest technologies in modern website development, sustainable projects might be delivered using and combination of the following:</p>
+            <ul class="space-y-2">
+                <li><h3 class="font-bold text-xl gradient-heading font-title">(Optional) CMS:</h3> Craft CMS, Sanity</li>
+                <li><h3 class="font-bold text-xl gradient-heading font-title">Frameworks:</h3> Astro.build, Next.js</li>
+                <li><h3 class="font-bold text-xl gradient-heading font-title">Interaction:</h3> Alpine.js, GreenSock GSAP</li>
+                <li><h3 class="font-bold text-xl gradient-heading font-title">Hosting:</h3> Servd.host, Netlify, Vercel</li>
+            </ul>
+        </Fragment>
+    </LongCopy>
+
+    <div class="p-8 text-center bg-white/40 isolate">
+        <h2 class="font-bold gradient-heading text-xl mb-4">Ready to build a new sustainable website?</h2>
+        <Button url="/contact" on={true}>Let's get started</Button>
+    </div>
+</BaseLayout>

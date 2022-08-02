@@ -1,0 +1,71 @@
+---
+import MainNav from '../components/nav/main.astro';
+import '../css/global.pcss';
+
+const { title = "" } = Astro.props;
+const isHome = Astro.url.pathname == '/';
+const isDevMod = import.meta.env.DEV;
+
+---
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />    
+	<meta name="keywords" content="Dan Richardson, freelance web developer, freelance craft cms developer, sustainable websites" />
+	<meta name="description" content="Dan Richardson - Freelance Web Developer, Derby" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&family=Roboto:wght@300&&family=Arvo:wght@400&&display=swap" rel="stylesheet">
+	<title>Dan Richardson - Freelance Web Developer, Derby</title>
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+</head>
+
+<body>
+	<div id="bg" class={`bg fixed inset-0 opacity-40 z-0`}></div>
+	<MainNav client:load />
+
+	<div class={`relative z-10 min-h-screen flex flex-col ${!isHome && 'pt-16'}`}>
+    	<slot />
+	</div>
+
+	<script>
+		document.addEventListener('DOMContentLoaded', function(){
+			if (window.matchMedia("(prefers-reduced-motion: no-preference)").matches){
+				const bg:HTMLDivElement = document.querySelector('#bg');
+				const moveHiglight = ({ clientX, clientY }) => {
+					const { x, y, width, height } = bg.getBoundingClientRect();
+					const dx = clientX - (x + 0.5 * width);
+					const dy = clientY - (y + 0.5 * height);
+					const angle = Math.atan2(dy, dx) * 180 / Math.PI;
+					
+					bg.style.setProperty('--startDeg', `${angle + 90}deg`);
+				};
+				window.addEventListener('mousemove', ({ clientX, clientY }) => {
+					moveHiglight({ clientX, clientY })			
+				}, false)
+			}
+		})
+	</script>
+    
+	{
+		!isDevMod && <script type="text/javascript">
+
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-859633-1']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+
+		</script>
+	}
+</body>
+
+</html>

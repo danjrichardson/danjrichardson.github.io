@@ -1,0 +1,10 @@
+{
+    "compilerOptions": {
+        "moduleResolution": "node",
+        "esModuleInterop": true,
+        "baseUrl": "./src",
+        "paths": {
+            "$api": ["api/*"]
+        }
+    }
+}

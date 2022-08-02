@@ -1,0 +1,92 @@
+---
+import BaseLayout from '../layouts/Base.astro'
+import Button from 'components/button.astro';
+import IconBolt from '../images/bolt.svg?raw';
+---
+<style>
+    .effective {
+        color: #e03da6;
+    }
+    .impactful {
+        color: #7c13ff;
+    }
+    .efficient {
+        color: #416199;
+    }
+    .fast {
+        color: #d99842;
+    }
+
+    .ticker {
+        display: inline-block;
+        vertical-align: middle;
+        width: min-content;
+        height: 2.5rem;
+        overflow: hidden;
+    }
+    .ticker-list {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        animation: ticker 8s ease-in-out infinite;
+    }
+    @keyframes ticker {
+        0% { transform: translateY(0%); }
+        22% { transform: translateY(-0%); }
+        25% { transform: translateY(-100%); }
+        47% { transform: translateY(-100%); }
+        50% { transform: translateY(-200%); }
+        72% { transform: translateY(-200%); }
+        75% { transform: translateY(-300%); }
+        97% { transform: translateY(-300%); }
+        100% { transform: translateY(-400%); }
+    }
+</style>
+<BaseLayout>
+    <div class="font-body text-xl">
+        <div class="grid md:grid-cols-2 auto-rows-screen-1/2">
+            <div class="bg-black/5 text-white center-mid">
+                <div>
+                    <div class="font-title uppercase">
+                        <h1 class="text-4xl sm:text-5xl mb-2 gradient-heading">Dan Richardson</h1>
+                        <h2 class="text-2xl opacity-85 text-[#17406b]">Freelance Web Developer, Derby</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="text-black center-mid">
+                <div class="font-title max-w-md uppercase leading-relaxed">
+                    <p class="flex flex-col sm:flex-row gap-x-1.5 mb-0 font-lead-in text-4xl">Websites should be 
+                        <span class="ticker">
+                            <span class="ticker-list">
+                                <a class="tick-item" href="/build#effective" ><span class="effective">effective</span></a>
+                                <a class="tick-item" href="/build#impactful"><span class="impactful">impactful</span></a>
+                                <a class="tick-item" href="/build#efficient"><span class="efficient">efficient</span></a>
+                                <a class="tick-item" href="/build#fast"><span class="fast inline-flex">fast <span class="w-10 fill-current" set:html={IconBolt}></span></span></a>
+                                <a class="tick-item" href="/build#effective" ><span class="effective">effective</span></a>
+                            </span>
+                        </span>
+                    </p>
+                    <p><span class="font-lead-in">Expect nothing less</span> from your website.</p>
+                </div>
+            </div>
+            <div class="bg-white/25 md:bg-transparent text-black center-mid">
+                <div class="max-w-md">
+                    <h3 class="text-2xl mb-8 font-body-alt gradient-heading">Sustainability</h3>
+                    <p class="mb-4">Conscious of sustainability and your <span class="whitespace-nowrap">businesses' effect?</span></p>
+                    <Button url="/sustainable-websites">Keep reading</Button>
+                </div>
+            </div>        
+            <div class="bg-transparent md:bg-white/25 text-black center-mid isolate">
+                <div class="max-w-md">
+                    <h3 class="text-2xl mb-8 font-body-alt gradient-heading">Ready to find out more?</h3>
+                    <p class="mb-4">Look through what I can help you with, and recent work I've done.</p>
+                    <div class="flex flex-col lg:flex-row lg:items-center space-y-4 lg:space-x-8 lg:space-y-0">
+                        <Button url="/services">Services</Button>
+                        <Button url="/work">Work</Button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div> 
+</BaseLayout>

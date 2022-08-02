@@ -1,0 +1,22 @@
+---
+import BaseLayout from '../layouts/Base.astro'
+import Button from 'components/button.astro';
+---
+<BaseLayout>	
+    <section class="my-auto relative flex flex-col justify-center text-center">
+        <h1 class="self-center mb-10 text-4xl lg:text-6xl gradient-heading tracking-tighter">Recent works</h1>
+        <div class="px-4 max-w-xl mx-auto space-y-6">
+            <p>This page is intentionally (at least for now) left blank, as the majority of my work that I do is for agencies - so it's not my work to show off!</p>
+            <p>I'm proud of the work I do though and I would be more than happy to personally show you what work I have done, just ask.</p>
+
+            {false && <div>
+                Or, do you have an access key to see my work? If so, enter it here.
+                <input type="password" placeholder="" class="w-3/4 text-3xl p-4 rounded-md border-2 mt-2 border-transparent transition-colors bg-white/50 text-center focus:outline-none focus:bg-white focus:border-[#4174a0]" />
+            </div>}
+        </div>
+
+        <div class="self-center !mt-10">
+            <Button url="/contact">Enquire about previous work</Button>
+        </div>
+    </section>
+</BaseLayout>

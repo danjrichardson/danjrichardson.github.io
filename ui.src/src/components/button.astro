@@ -1,0 +1,19 @@
+---
+export interface Props {
+    url: string,
+    on?: boolean
+}
+const { url, on = true } = Astro.props;
+---
+<a href={url} class={`relative py-4 px-6 inline-flex items-center border-2 transition-colors group arrow-button hover:bg-white
+    ${!on && 'border-white/40 hover:border-transparent'}
+    ${on && 'arrow-button__on border-transparent'}`}>
+    <span class="inline-block transform transition-transform ease-in delay-100 group-hover:translate-x-2 font-lead-in uppercase">
+        <slot />
+    </span>
+    <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" class="inline-block ml-4">        
+        <path class="arrow-1" d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z" fill="currentColor"/>
+        <path class="arrow-2" d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z" fill="currentColor"/>
+    </svg>
+    <span class="absolute bg-black inset-0 z-[-1] transform transition group-hover:delay-200 opacity-0 group-hover:opacity-100 group-hover:translate-x-3 group-hover:translate-y-3"></span>
+</a>

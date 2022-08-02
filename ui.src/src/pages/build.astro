@@ -1,0 +1,180 @@
+---
+import BaseLayout from '../layouts/Base.astro'
+import ArrowRight from '../images/arrow-right.svg?raw';
+import LongCopy from '../components/copy/long-copy.astro';
+import LeadInText from "../components/copy/lead-in-text.astro";
+import Button from 'components/button.astro';
+---
+<script>
+    document.addEventListener('DOMContentLoaded', function(){
+        const btn = document.getElementById('scrollToContent');
+        if (btn){
+            btn.addEventListener('click', () => {
+                window.scrollTo({
+                    top: window.innerHeight,
+                    behavior: "smooth"
+                });
+            });
+        }
+    });
+</script>
+<BaseLayout>
+    <section class="relative h-screen flex flex-col justify-center text-center text-2xl">
+        <h1 class="self-center mb-4 text-4xl lg:text-6xl gradient-heading tracking-tighter">Effective, impactful,<span class="lg:block"></span> efficient, fast.</h1>
+        <p class="px-4">Your <span class="relative inline-block after:absolute after:left-0 after:bottom-1 after:-rotate-3 after:inline-block after:w-full after:h-px after:bg-current">new</span> website should deliver on all these critical points.</p>
+        <button class="w-5 mx-auto motion-safe:animate-bounce mt-20" id="scrollToContent">
+            <div class="fill-orange-500 rotate-90" set:html={ArrowRight}></div>
+        </button>
+    </section>
+
+    <section>
+        <LongCopy title={true}>
+            <Fragment slot="title">Building effective and <span class="sm:whitespace-nowrap">impactful websites</span></Fragment>
+            <Fragment slot="lead-in">
+                <LeadInText tag="h3">
+                    Effective websites.
+                </LeadInText>
+            </Fragment>
+            <Fragment slot="copy">
+                <p>Anything new should be built to address the original goals, if it doesn't then the website is simply not going to be effective.</p>
+                <LeadInText tag="span" size="text-2xl" class="gradient-heading">
+                    What is effective?
+                </LeadInText>
+                <p>The answer to “What is effective” can vary from client to client, and even within a single project. It could be a higher ecommerce conversion rate, or converting quality leads from the site into offline business.</p>
+                <p>We'll work together to understand what those goals are to make sure that your website has the best chance possible.</p>
+            </Fragment>
+        </LongCopy>
+
+        <LongCopy reverse={true}>
+            <Fragment slot="lead-in">
+                <LeadInText tag="h3">
+                    Impactful websites.
+                </LeadInText>
+
+                <div class="relative aspect-[350/285] my-10">
+                    <svg class="absolute top-0 left-0 w-full" viewBox="0 0 327 258" xmlns="http://www.w3.org/2000/svg">
+                        <path fill="url(#paint0_linear_5_4)" d="M325.081 103C314.118 180.04 204.706 258 137.56 258C70.414 258 0 228.832 0 157.456C0 86.0802 76.742 25.5 239.516 -3.05176e-05C306.662 -3.05176e-05 334.971 33.5 325.081 103Z" />
+                        <defs>
+                            <linearGradient id="paint0_linear_5_4" x1="-0.591081" y1="322.265" x2="689.074" y2="314.012" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#33758C"/>
+                            <stop offset="0.322917" stop-color="#416199"/>
+                            <stop offset="0.671875" stop-color="#8015FC"/>
+                            <stop offset="1" stop-color="#E03DA6"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>                 
+                    <img class="blob-mask--alt absolute w-full h-full" src="https://images.unsplash.com/photo-1503551723145-6c040742065b-v2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=400&fp-x=0&q=80" alt="" />
+                </div>
+            </Fragment>
+            <Fragment slot="copy">
+                <p>A site that is effective by being fast and efficient, will be impactful. The design of the website (and its content) should be sympathetic and relate to your users, this plays a key role in a website leaving a positive impression.</p>
+                <LeadInText tag="span" size="text-2xl" class="gradient-heading">
+                    How is it impactful?
+                </LeadInText>
+                <p>Having a mental note in a user's head after they leave your site can help your users remember you, with a higher chance of return visits and realising the website’s goals.</p>
+            </Fragment>
+        </LongCopy>
+    </section>
+
+    <section>
+        <LongCopy title={true}>
+            <Fragment slot="title">
+                Building efficient and <span class="sm:whitespace-nowrap">fast websites</span>
+            </Fragment>
+            <Fragment slot="lead-in">
+                <LeadInText tag="h3">
+                    Efficient websites.
+                </LeadInText>
+
+                <div class="relative aspect-[350/285] my-10 -scale-x-100">
+                    <svg class="absolute top-0 left-0 w-full" viewBox="0 0 690 565" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M674.5 293.5C716.5 444 672.462 565 506.5 565C340.538 565 0 414.498 0 264C0 113.502 113.538 0.499939 279.5 0.499939C445.462 0.499939 601 133 674.5 293.5Z" fill="url(#paint0_linear_5_3)"/>
+                        <defs>
+                        <linearGradient id="paint0_linear_5_3" x1="-0.591081" y1="322.265" x2="689.074" y2="314.012" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#E03DA6"/>
+                        <stop offset="0.322917" stop-color="#8015FC"/>
+                        <stop offset="0.671875" stop-color="#416199"/>
+                        <stop offset="1" stop-color="#33758C"/>
+                        </linearGradient>
+                        </defs>
+                    </svg>                  
+                    <img class="blob-mask absolute w-full h-full" src="https://images.unsplash.com/photo-1612263731558-bbac49f8581a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=400&q=80" alt="" />
+                </div>
+            </Fragment>
+            <Fragment slot="copy">
+                <p>Tied closely to websites being fast, efficient websites really drive a users overall impression of a website. It's well documented that web page speed greatly affects bounce rates, ecommerce conversion rates, and user experience.</p>
+                <LeadInText tag="span" size="text-2xl" class="gradient-heading">
+                    What drives efficiency?
+                </LeadInText>
+                <p>The way a website is built is one of the biggest factors that affect overall page speed.</p>
+                <p>Poorly built websites that have not been carefully considered, serve unnecessary/bloated resources, incorrect image sizes, and various other factors all play a major role in a website being efficient.</p>
+                <p><a href="/sustainable-websites" class="border-b border-current transition-colors hover:text-[#673ab7]">Sustainable websites</a> hold the trump card for efficiency and will often wipe the floor with sites that are not built with efficiency in mind, without having to have hosting that cost £000s per month.</p>
+            </Fragment>
+        </LongCopy>
+
+        <LongCopy reverse={true}>
+            <Fragment slot="lead-in">
+                <LeadInText tag="h3">
+                    Fast websites.
+                </LeadInText>
+
+                <div class="relative aspect-[350/285] my-10">
+                    <svg class="absolute top-0 left-0 w-full" viewBox="0 0 690 565" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M674.5 293.5C716.5 444 672.462 565 506.5 565C340.538 565 0 414.498 0 264C0 113.502 113.538 0.499939 279.5 0.499939C445.462 0.499939 601 133 674.5 293.5Z" fill="url(#paint0_linear_5_3)"/>
+                        <defs>
+                        <linearGradient id="paint0_linear_5_3" x1="-0.591081" y1="322.265" x2="689.074" y2="314.012" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#E03DA6"/>
+                        <stop offset="0.322917" stop-color="#8015FC"/>
+                        <stop offset="0.671875" stop-color="#416199"/>
+                        <stop offset="1" stop-color="#33758C"/>
+                        </linearGradient>
+                        </defs>
+                    </svg>                  
+                    <img class="blob-mask absolute w-full h-full" src="https://images.unsplash.com/photo-1518709911915-712d5fd04677?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=400&fp-y=0.3&q=80" alt="" />
+                </div>
+            </Fragment>
+            <Fragment slot="copy">
+                <p>Pre-generated (or static) websites will most often be quicker than a website that generates the page every time it is requested.</p>
+                <LeadInText tag="span" size="text-2xl" class="gradient-heading">
+                    Does fast mean feature-less?
+                </LeadInText>
+                <p>Static websites don't mean that they are any less of a website though, and they are generally the best way to create a marketing/content/business website - they are even now more than capable as ecommerce websites.</p>
+                <p>These websites can be made in a variety of ways, with or without a content management system (CMS), and can be made available to users all around the world so it's really fast for everyone</p>
+            </Fragment>
+        </LongCopy>
+    </section>
+
+    <section>
+        <LongCopy title={true}>
+            <Fragment slot="title">
+                Cost
+            </Fragment>
+            <Fragment slot="lead-in">
+                <LeadInText tag="h3">
+                    So if my site is going to be effective, impactful, efficient, and fast&hellip; does that mean it's got a price tag to match?
+                </LeadInText>
+            </Fragment>
+            <Fragment slot="copy">
+                <p>Like a lot of things in life, you need to understand the value in something to be able to justify the cost.<br />
+                A simple 1 page landing page website with simple company contact information might only cost £300-500 but other than being useful, it doesn’t really offer anything more to the user.</p>
+
+                <p>Increasing the number of pages to your site will help you create a story around your business to engage your users and potential customers, and also to create new marketing landing pages to really engage the user and entice them to get in touch - letting your website be a great sales tool.</p>
+
+                <p>Get in touch to find out more about pricing but as very rough guide, this <i>could</i> look like:</p>
+
+                <ul class="italic text-base">
+                    <li>Single page sites starting from £300</li>
+                    <li>Smaller marketing sites start from £4000-£6000</li>
+                    <li>Larger informational sites starting from £6000-£8000</li>
+                    <li>Ecommerce sites starting from £5000-£7000</li>
+                </ul>
+
+            </Fragment>
+        </LongCopy>
+    </section>
+    
+    <div class="p-8 text-center bg-white/40 isolate">
+        <h4 class="font-bold gradient-heading text-xl mb-4">Are you interested in finding out more?</h4>
+        <Button url="/contact" on={true}>Get in touch</Button>
+    </div>
+</BaseLayout>

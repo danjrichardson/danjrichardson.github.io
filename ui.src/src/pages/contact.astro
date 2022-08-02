@@ -1,0 +1,43 @@
+---
+import BaseLayout from '../layouts/Base.astro';
+import Button from 'components/button.astro';
+import IconEmail from '../images/email.svg?raw';
+---
+<style>
+    .calendly-inline-widget {
+        min-height: calc(100vh - 4rem);
+        background-color: #ffffff;
+    }
+    .calendly-inline-widget :global(iframe) {
+        height: 100%;
+    }
+</style>
+<BaseLayout>
+    <div class="flex flex-col justify-center">
+        <div class="max-w-5xl mx-auto grid md:grid-cols-2 items-center gap-10 px-5">
+            <div>
+                <h1 class="self-center text-5xl gradient-heading mb-10">Get in touch</h1>
+                <div class="space-y-4">
+                    <p>The best way to get in touch is by email and I'll try getting back to you as soon as I can.</p>
+                    <p>If you can let me know when is the best time and day to contact you, then I will try my best to work around you.</p>
+                    <p>Feel free to ask me any questions you may have; there is no such thing as a silly question.</p>
+                    <p>Alternatively, you can schedule a call with me on Calendly.</p>
+
+                    <div class="!mt-10">
+                        <Button url="mailto:info@danrichardson.net">
+                            <span class="inline-flex items-center self-center">
+                                <span class="w-5 fill-current" set:html={IconEmail}></span> <span class="ml-4">Email Me</span>
+                            </span>
+                        </Button>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <!-- Calendly inline widget begin -->
+                <div class="calendly-inline-widget" data-url="https://calendly.com/one66studio/15min" style="min-width:320px;height:630px;"></div>
+                <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+                <!-- Calendly inline widget end -->
+            </div>            
+        </div>
+    </div>
+</BaseLayout>
