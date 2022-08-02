@@ -48,18 +48,21 @@ const init = () => {
         return variable.toString() === check.toString();
     }
 
-    menuButton.addEventListener('mouseenter', () => {
-        if (booleanIs(menuButton.dataset.isOpen, false)){
-            tl.tweenFromTo('idle', 'idle:hover');
-        }
-    });
-    menuButton.addEventListener('mouseleave', () => {
-        if (booleanIs(menuButton.dataset.isOpen, false)){
-            if (!tl.isActive()){
-                tl.tweenFromTo('idle:hover', 'idle');
+    if (!('ontouchstart' in window) || navigator.maxTouchPoints === 0)
+    {
+        menuButton.addEventListener('mouseenter', () => {
+            if (booleanIs(menuButton.dataset.isOpen, false)){
+                tl.tweenFromTo('idle', 'idle:hover');
             }
-        }
-    });
+        });
+        menuButton.addEventListener('mouseleave', () => {
+            if (booleanIs(menuButton.dataset.isOpen, false)){
+                if (!tl.isActive()){
+                    tl.tweenFromTo('idle:hover', 'idle');
+                }
+            }
+        });
+    }
     menuButton.addEventListener('click', () => {
         if (booleanIs(menuButton.dataset.isOpen, false)){
             tl.play();
