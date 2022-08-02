@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/Base.astro';
 import LongCopy from '../components/copy/long-copy.astro';
 import LeadInText from "../components/copy/lead-in-text.astro";
+import Button from 'components/button.astro';
 ---
 <BaseLayout>
     <LongCopy title={true} titleImportance="h1">
@@ -38,8 +39,9 @@ import LeadInText from "../components/copy/lead-in-text.astro";
                 <li>In-page or full-page animation, page transitions</li>
                 <li>Highly interactive pages, such as quote builders, product ordering/customisation, information exploration</li>
             </ul>
-
-            <p><a href="/contact" class="underline">Talk to me about a new project</a></p>
+            <p class="!mt-8">
+                <Button url="/contact" on={true}>Let's talk about a new project</Button>
+            </p>
         </Fragment>
     </LongCopy>
     <LongCopy reverse={true}>
@@ -64,13 +66,14 @@ import LeadInText from "../components/copy/lead-in-text.astro";
                 <li>Analysing how static assets, such as images, CSS, JavaScript is delivered</li>
                 <li>Checking server capabilities for modern technologies, such as delivering next-gen image formats, caching headers for static assets, such as images, CSS, Javascript.</li>
             </ul>
-
-            <a href="/contact" class="underline">Arrange a performance audit</a>
+            <p class="!mt-8">
+                <Button url="/contact" on={true}>Arrange a performance audit</Button>
+            </p>
         </Fragment>
     </LongCopy>
 
-    <div class="p-8 text-center bg-white/40">
-        <h2 class="font-bold gradient-heading text-xl">Is there a service you would like to find out more about?</h2>
-        <p><a href="/contact" class="underline">Contact me</a> to discuss it more detail.</p>
+    <div class="p-8 text-center bg-white/40 isolate">
+        <h2 class="font-bold gradient-heading text-xl mb-4">Is there a service you would like to know more about?</h2>
+        <Button url="/contact" on={true}>Find out more</Button>
     </div>
 </BaseLayout>

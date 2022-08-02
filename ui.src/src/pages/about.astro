@@ -4,6 +4,7 @@ import LongCopy from '../components/copy/long-copy.astro';
 import LeadInText from "../components/copy/lead-in-text.astro";
 import IconBolt from '../images/bolt.svg?raw';
 import IconSustainability from '../images/sustainability.svg?raw';
+import Button from 'components/button.astro';
 const yearStart = 2006;
 const yearsSince = new Date().getFullYear() - yearStart;
 // THINGS I CAN DO:<br />
@@ -158,8 +159,8 @@ const yearsSince = new Date().getFullYear() - yearStart;
         </LongCopy>
     </section>
 
-    <div class="p-8 text-center bg-white/40">
-        <h4 class="font-bold gradient-heading text-xl">Want to find out more about me?</h4>
-        <p>Feel free to <a href="/contact" class="underline">contact me</a></p>
+    <div class="p-8 text-center bg-white/40 isolate">
+        <h4 class="font-bold gradient-heading text-xl mb-4">Want to find out more about me?</h4>
+        <Button url="/contact" on={true}>Get in touch</Button>
     </div>
 </BaseLayout>

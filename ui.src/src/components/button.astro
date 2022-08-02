@@ -3,7 +3,7 @@ export interface Props {
     url: string,
     on?: boolean
 }
-const { url, on = false } = Astro.props;
+const { url, on = true } = Astro.props;
 ---
 <a href={url} class={`relative py-4 px-6 inline-flex items-center border-2 transition-colors group arrow-button hover:bg-white
     ${!on && 'border-white/40 hover:border-transparent'}

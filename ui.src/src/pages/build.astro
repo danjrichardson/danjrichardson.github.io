@@ -3,6 +3,7 @@ import BaseLayout from '../layouts/Base.astro'
 import ArrowRight from '../images/arrow-right.svg?raw';
 import LongCopy from '../components/copy/long-copy.astro';
 import LeadInText from "../components/copy/lead-in-text.astro";
+import Button from 'components/button.astro';
 ---
 <script>
     document.addEventListener('DOMContentLoaded', function(){
@@ -127,8 +128,8 @@ import LeadInText from "../components/copy/lead-in-text.astro";
         </LongCopy>
     </section>
     
-    <div class="p-8 text-center bg-white/40">
-        <h4 class="font-bold gradient-heading text-xl">Want to find out more?</h4>
-        <p>Feel free to <a href="/contact" class="underline">contact me</a></p>
+    <div class="p-8 text-center bg-white/40 isolate">
+        <h4 class="font-bold gradient-heading text-xl mb-4">Are you interested in finding out more?</h4>
+        <Button url="/contact" on={true}>Get in touch</Button>
     </div>
 </BaseLayout>
