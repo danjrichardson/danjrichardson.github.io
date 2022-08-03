@@ -6,7 +6,7 @@ const init = () => {
     const menuButton = document.querySelector('#menuButton');
     const menuHighlight = document.querySelector('#menuHighlight');
     const menuContents = document.querySelector('#menuContents');
-    const header = menuButton.closest('header');
+    const backdrop = document.querySelector('#backdrop')
     const menuContentItems = Array.from(menuContents.querySelectorAll('a'));
     const { bottom, width, height, x } = menuButton.getBoundingClientRect();
     const cs = getComputedStyle(menuButton)
@@ -21,15 +21,15 @@ const init = () => {
         top: -1
     });
 
-    gsap.to(header, {
+    gsap.to(backdrop, {
         scrollTrigger: {
-            start: `top ${header.offsetHeight * -1}`,
+            start: `top ${backdrop.offsetHeight * -1}`,
             markers: true,
             onEnter: () => {
-                header.classList.add('backdrop-blur-lg', 'bg-white/20');
+                backdrop.classList.add('backdrop-blur-lg', 'bg-white/20');
             },
             onLeaveBack: () => {
-                header.classList.remove('backdrop-blur-lg', 'bg-white/20');
+                backdrop.classList.remove('backdrop-blur-lg', 'bg-white/20');
             }
         }
     });

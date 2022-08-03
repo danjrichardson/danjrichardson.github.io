@@ -30,7 +30,8 @@ const pages:Array<PageItem> = [
     import init from './main.js';
     init();
 </script>
-<header class="fixed z-20 top-0 left-0 w-full flex justify-between items-center pl-4 xl:px-5 transition-all lg:backdrop-blur-none lg:bg-none">
+<header class="fixed z-20 top-0 left-0 w-full flex justify-between items-center pl-4 xl:px-5">
+    <div id="backdrop" class="absolute inset-0 transition-all lg:backdrop-blur-none lg:bg-transparent"></div>
     <a href="/" class="fill-black w-6 relative z-40" aria-label="Homepage" set:html={HomeIcon}></a>
     <button id="menuButton" class="menuButton p-5 text-black z-40 uppercase text-sm">MENU</button>
     <div id="menuHighlight" class="fixed top-16 right-0 w-full h-px bg-black z-40 opacity-0 pointer-events-none"></div>
