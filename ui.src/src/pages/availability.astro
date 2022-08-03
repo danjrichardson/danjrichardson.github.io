@@ -1,0 +1,87 @@
+---
+import BaseLayout from '../layouts/Base.astro';
+import LongCopy from '../components/copy/long-copy.astro';
+import LeadInText from "../components/copy/lead-in-text.astro";
+import IconBolt from '../images/bolt.svg?raw';
+import IconSustainability from '../images/sustainability.svg?raw';
+import Button from 'components/button.astro';
+---
+<style>
+    .dot {
+        @apply inline-block align-middle ml-3 w-5 h-5 rounded-full bg-current outline outline-2 outline-offset-2;
+    }
+</style>
+<BaseLayout>
+	
+    <section>
+        <LongCopy title={true} titleImportance="h1">
+            <Fragment slot="title">
+                Availability &amp; Rates
+            </Fragment>
+            <Fragment slot="lead-in">
+                <LeadInText tag="h2">
+                    Current availability
+                </LeadInText>
+            </Fragment>
+            <Fragment slot="copy">
+                <div class="space-y-8">
+                    <div>
+                        <h3 class="font-bold">Smaller / BAU type job availability</h3>
+                        <p>Good <span class="dot text-green-500"></span></p>
+                    </div>
+
+                    <div>
+                        <h3 class="font-bold">Project work</h3>
+                        <p>Delays <span class="dot text-orange-500"></span></p>
+                    </div>
+
+                    <hr class="border-gray-500" />
+
+                    <div>
+                        <h3 class="font-bold">August</h3>
+                        <p>
+                            Our 3rd child is due in August so I have a lot of availability at the minute for smaller jobs.
+                        </p>
+                    </div>
+                    
+                    <div>
+                        <h3 class="font-bold">September, onwards</h3>
+                        <p>Currently clear for bookings from September.</p>
+                    </div>
+                </div>
+            </Fragment>
+        </LongCopy>
+        <LongCopy>
+            <Fragment slot="lead-in">
+                <LeadInText tag="h2">
+                    Rates
+                </LeadInText>
+            </Fragment>
+            <Fragment slot="copy">
+                <p>It's best to always be honest and transparent with rates and pricing. See below for my current 2022 rates:</p>
+                <div>
+                    <h3 class="font-bold">Day rate</h3>
+                    <p>
+                        Frontend only development: £350 per day<br />
+                        All other development: £400-450 per day
+                    </p>
+                    <p class="text-base text-orange-700 mt-2">It's always best to discuss your requirements this with me first, as depending on the development I may be able to charge the lower day rate.</p>
+                </div>
+                <div>
+                    <h3 class="font-bold">Hourly rate</h3>
+                    <p>
+                        Frontend development: £60p/h<br />
+                        Backend development: £70p/h
+                    </p>
+                    <p class="text-base text-orange-700 mt-2">I'm always more keen to work on a day rate as it's more cost effective for you and easier to plan for me.
+                        So if you have a few smaller jobs that can be queued up and done in one go, that's going to be better.</p>
+                </div>
+            </Fragment>
+        </LongCopy>
+    </section>
+
+    <div class="p-8 text-center bg-white/40 isolate">
+        <h4 class="font-bold gradient-heading text-xl mb-4">Would you like to find out more about current availability and rates?</h4>
+        <Button url="/contact" on={true}>Get in touch</Button>
+    </div>
+</BaseLayout>
