@@ -24,7 +24,6 @@ const init = () => {
     gsap.to(backdrop, {
         scrollTrigger: {
             start: `top ${backdrop.offsetHeight * -1}`,
-            markers: true,
             onEnter: () => {
                 backdrop.classList.add('backdrop-blur-lg', 'bg-white/20');
             },
