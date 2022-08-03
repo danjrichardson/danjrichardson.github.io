@@ -1,9 +1,12 @@
 import { gsap, Expo } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 const init = () => {
     const menuButton = document.querySelector('#menuButton');
     const menuHighlight = document.querySelector('#menuHighlight');
     const menuContents = document.querySelector('#menuContents');
+    const header = menuButton.closest('header');
     const menuContentItems = Array.from(menuContents.querySelectorAll('a'));
     const { bottom, width, height, x } = menuButton.getBoundingClientRect();
     const cs = getComputedStyle(menuButton)
@@ -16,6 +19,19 @@ const init = () => {
 
     gsap.set(menuHighlight, {
         top: -1
+    });
+
+    gsap.to(header, {
+        scrollTrigger: {
+            start: `top ${header.offsetHeight * -1}`,
+            markers: true,
+            onEnter: () => {
+                header.classList.add('backdrop-blur-lg', 'bg-white/20');
+            },
+            onLeaveBack: () => {
+                header.classList.remove('backdrop-blur-lg', 'bg-white/20');
+            }
+        }
     });
     
     const tl = gsap.timeline({ paused: true });

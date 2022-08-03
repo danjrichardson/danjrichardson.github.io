@@ -30,15 +30,17 @@ const pages:Array<PageItem> = [
     import init from './main.js';
     init();
 </script>
-<a href="/" class="fill-black w-6 fixed top-4 left-4 xl:left-5 z-40" aria-label="Homepage" set:html={HomeIcon}></a>
-<button id="menuButton" class="menuButton fixed top-0 right-0 xl:right-5 p-5 text-black z-40 uppercase text-sm">MENU</button>
-<div id="menuHighlight" class="fixed top-16 right-0 w-full h-px bg-black z-40 opacity-0 pointer-events-none"></div>
-<nav id="menuContents" class="fixed inset-0 bg-white z-30 pointer-events-none opacity-0">
-    <ul class="w-full h-full flex flex-col items-center justify-center text-3xl md:text-6xl uppercase font-bold space-y-4">
-        {
-            pages.map(({ url, text }) => (<li>
-                    <a href={url} class="block gradient-heading after:block after:h-px sm:after:h-1 after:rounded-full after:w-full after:bg-[#7c13ff] after:scale-x-0 after:transition-transform hover:after:scale-x-100">{text}</a>
-            </li>))
-        }
-    </ul>
-</nav>
+<header class="fixed z-20 top-0 left-0 w-full flex justify-between items-center pl-4 xl:px-5 transition-all lg:backdrop-blur-none lg:bg-none">
+    <a href="/" class="fill-black w-6 relative z-40" aria-label="Homepage" set:html={HomeIcon}></a>
+    <button id="menuButton" class="menuButton p-5 text-black z-40 uppercase text-sm">MENU</button>
+    <div id="menuHighlight" class="fixed top-16 right-0 w-full h-px bg-black z-40 opacity-0 pointer-events-none"></div>
+    <nav id="menuContents" class="fixed inset-0 bg-white z-30 pointer-events-none opacity-0">
+        <ul class="w-full h-full flex flex-col items-center justify-center text-3xl md:text-6xl uppercase font-bold space-y-4">
+            {
+                pages.map(({ url, text }) => (<li>
+                        <a href={url} class="block gradient-heading after:block after:h-px sm:after:h-1 after:rounded-full after:w-full after:bg-[#7c13ff] after:scale-x-0 after:transition-transform hover:after:scale-x-100">{text}</a>
+                </li>))
+            }
+        </ul>
+    </nav>
+</header>
