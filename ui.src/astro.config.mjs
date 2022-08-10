@@ -21,5 +21,6 @@ export default defineConfig({
     port: 3000
   },
   site: 'https://danrichardson.net',
+  trailingSlash: 'always',
   vite: {},
 });
