@@ -9,7 +9,17 @@ const isDevMod = import.meta.env.DEV;
 ---
 <html lang="en">
 
-<head>
+<head>  
+	{!isDevMod &&  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LNZP4B5NNE"></script>}
+	{
+		!isDevMod && <script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'G-LNZP4B5NNE');
+		</script>
+	}
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />    
 	<meta name="keywords" content="Dan Richardson, freelance web developer, freelance craft cms developer, sustainable websites" />
