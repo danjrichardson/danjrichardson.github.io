@@ -36,7 +36,7 @@ const isDevMod = import.meta.env.DEV;
 
 <body>
 	<div id="bg" class={`bg fixed inset-0 opacity-40 z-0`}></div>
-	<MainNav client:load />
+	<MainNav />
 
 	<div class={`relative z-10 min-h-screen flex flex-col ${!isHome && 'pt-16'}`}>
     	<slot />
